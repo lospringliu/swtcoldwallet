@@ -1,0 +1,23 @@
+* text=auto
+
+*.css text
+*.js text
+*.html text
+*.htm text
+*.c text
+*.cpp text
+*.h text
+*.java text
+*.py text
+*.svg text
+
+*.png binary
+*.jpg binary
+*.gif binary
+*.rpm binary
+*.zip binary
+*.rar binary
+*.jar binary
+*.tar binary
+*.tar.gz binary
+*.Z binary
