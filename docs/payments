@@ -17,7 +17,7 @@
 > op.setAmount(amt);
 > op.setMemo("small payment on 20180823");
 > op.setValidate(true);
-> op.submit((err,data) => {console.log(data);})
+> op.submit(cprint)
 
 > wold.getBalance(cprint)
 > wnew.getBalance(cprint)
