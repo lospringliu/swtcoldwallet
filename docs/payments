@@ -1,0 +1,23 @@
+> var jsdk = require('jingtum-sdk');
+> var Wallet = jsdk.Wallet;
+> var Amount = jsdk.Amount;
+> var PaymentOperation = jsdk.PaymentOperation;
+
+> var cprint = (err,data) => { if (err) { console.log(err); return ;} ; console.log(data); };
+
+> wnew = new Wallet('s............................')
+> wold = new Wallet('s............................')
+
+> wold.getBalance(cprint)
+> wnew.getBalance(cprint)
+
+> var amt = new Amount('30', 'SWT', '');
+> var op = PaymentOperation(wold);
+> op.setDestAddress(wnew.address);
+> op.setAmount(amt);
+> op.setMemo("small payment on 20180823");
+> op.setValidate(true);
+> op.submit((err,data) => {console.log(data);})
+
+> wold.getBalance(cprint)
+> wnew.getBalance(cprint)
