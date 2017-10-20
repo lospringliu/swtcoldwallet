@@ -8,7 +8,7 @@
 
 	1	到 http://state.jingtum.com, 公钥输入搜索栏中，搜索应该提示未激活
 
-	2	或者 到https://api.jingtum.com/v1/accounts/j................................./balances, 应该返回 "Account Not Found"
+	2	或者 到https://api.jingtum.com/v2/accounts/j................................./balances, 应该返回 "Account Not Found"
 
 3	转账
 
