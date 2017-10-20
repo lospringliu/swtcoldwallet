@@ -1,0 +1,3769 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API说明 V2.0.3 &mdash; Jingtum 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="Jingtum 1.0.0 文档" href="index.html"/>
+        <link rel="next" title="Java SDK" href="sdk_java.html"/>
+        <link rel="prev" title="记录类信息" href="chapter6_transaction.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jingtum
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">文档内容</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_start.html">接入流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_concepts.html">基本概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_modes.html">交易模式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2_account.html">账号类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3_fingate.html">银关类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4_payment.html">支付类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter7_relation.html">关系类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter5_offer.html">挂单类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6_transaction.html">记录类信息</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="api2_doc.html#">API说明 V2.0.3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id1">账号类接口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id2">创建钱包</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id3">获得账号余额</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id4">支付接口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id5">查询支付选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id6">支付请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id7">获得支付信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id8">获得支付历史</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id9">挂单类接口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id10">提交挂单</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id11">取消挂单</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id12">获取用户挂单</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id13">获取挂单信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id14">获得货币对的挂单列表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id15">获得货币对的买单列表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id16">获得货币对的卖单列表</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id17">交易记录接口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id18">查询交易信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id19">查询交易记录</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id20">交易记录信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#effects">交易效果effects</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id23">智能合约</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id24">部署合约</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id27">调用合约</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id32">本地签名</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id33">提交本地签名</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id36">订阅功能</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id37">连接服务</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id38">发起订阅</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id39">取消订阅</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id40">接收消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id41">关闭订阅</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id42">错误信息</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id43">客户端错误</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id44">网络错误</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id45">交易错误</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api2_doc.html#id46">服务端错误</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk_java.html">Java SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_python.html">Python SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_php.html">PHP SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_nodejs.html">Node.JS SDK</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Jingtum</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>API说明 V2.0.3</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-v2-0-3">
+<h1>API说明 V2.0.3<a class="headerlink" href="api2_doc.html#api-v2-0-3" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>账号类接口<a class="headerlink" href="api2_doc.html#id1" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id2">
+<h3>创建钱包<a class="headerlink" href="api2_doc.html#id2" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/wallet/new，GET方法</p>
+<p>例子：
+<a class="reference external" href="http://localhost/v2/wallet/new">http://localhost/v2/wallet/new</a></p>
+<p>结果如下：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;wallet&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;ssD7KN7xnoznunG4H3TF6weF9kWb4&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;jN22GEKA4kha8xGktuo1K4MpMhx6RRahQS&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="6%" />
+<col width="30%" />
+<col width="22%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">success</td>
+<td>Boolean</td>
+<td colspan="2">请求结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">wallet</td>
+<td>Object</td>
+<td colspan="2">井通钱包</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">secret</td>
+<td>String</td>
+<td colspan="2">井通钱包私钥</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">address</td>
+<td>String</td>
+<td colspan="2">井通钱包地址</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h3>获得账号余额<a class="headerlink" href="api2_doc.html#id3" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:address}/balances，GET方法</p>
+<p>接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="15%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address</td>
+<td>String</td>
+<td>井通钱包地址</td>
+</tr>
+</tbody>
+</table>
+<p>可选接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="15%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>currency</td>
+<td>String</td>
+<td>指定返回对应货币的余额</td>
+</tr>
+<tr class="row-odd"><td>issuer</td>
+<td>String</td>
+<td>指定返回对应银关发行的货币</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/accounts/jQNdYXxgNHY49oxDL8mrjr7J6k7tdNy1kM/balances
+</pre></div>
+</div>
+<p>结果如下：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>{
+  &quot;success&quot;: true,
+  &quot;status_code&quot;: 0,
+  &quot;balances&quot;: [
+    {
+      &quot;value&quot;: &quot;97.63958&quot;,
+      &quot;currency&quot;: &quot;SWT&quot;,
+      &quot;issuer&quot;: &quot;&quot;,
+      &quot;freezed&quot;: &quot;35&quot;
+    },
+    {
+      &quot;value&quot;: &quot;99&quot;,
+      &quot;currency&quot;: &quot;AAA&quot;,
+      &quot;issuer&quot;: &quot;jMhLAPaNFo288PNo5HMC37kg6ULjJg8vPf&quot;,
+      &quot;freezed&quot;: &quot;0&quot;
+    },
+    {
+      &quot;value&quot;: &quot;0&quot;,
+      &quot;currency&quot;: &quot;CNY&quot;,
+      &quot;issuer&quot;: &quot;jMhLAPaNFo288PNo5HMC37kg6ULjJg8vPf&quot;,
+      &quot;freezed&quot;: &quot;0&quot;
+    }
+  ]，
+  &quot;sequence&quot;: 164,
+}
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="23%" />
+<col width="17%" />
+<col width="14%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">success</td>
+<td>Boolean</td>
+<td colspan="2">请求结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">balances</td>
+<td>Array</td>
+<td colspan="2">余额数组</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">value</td>
+<td>String</td>
+<td colspan="2">余额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">currency</td>
+<td>String</td>
+<td colspan="2">货币名称，三个字母或20字节的货币</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">issuer</td>
+<td>String</td>
+<td colspan="2">货币发行方</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">freezed</td>
+<td>String</td>
+<td colspan="2">冻结的金额</td>
+</tr>
+<tr class="row-even"><td colspan="3">sequence</td>
+<td>Integer</td>
+<td colspan="2">当前交易序列号（用于本地签名）</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>支付接口<a class="headerlink" href="api2_doc.html#id4" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id5">
+<h3>查询支付选择<a class="headerlink" href="api2_doc.html#id5" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:source_address}/payments/choices/{:destination_address}/{:amount}，GET方法</p>
+<p>接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="6%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>source_address</td>
+<td>String</td>
+<td>支付方的井通地址</td>
+</tr>
+<tr class="row-odd"><td>destination_address</td>
+<td>String</td>
+<td>接收方的井通地址</td>
+</tr>
+<tr class="row-even"><td>amount</td>
+<td>String</td>
+<td>数值+货币+货币发行方，例如：1.00+AAA+jMhLAPaNFo288PNo5HMC37kg6ULjJg8vPf注意：支付SWT不需要选择，所以查询SWT的支付选择是不存在的</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/accounts/jQNdYXxgNHY49oxDL8mrjr7J6k7tdNy1kM/payments/choices/jD2RbZEpBG3T6iWDPyPiNBvpU8sAhRYbpZ/1.00+AAA+jMhLAPaNFo288PNo5HMC37kg6ULjJg8vPf
+</pre></div>
+</div>
+<p>结果如下：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;choices&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+     <span class="nt">&quot;choice&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;4ffa0e4da55b3501f4704d49f98d922e69a2d0cc&quot;</span>
+    <span class="p">},</span>
+        <span class="p">{</span>
+    <span class="nt">&quot;choice&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BBB&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;issuer&quot;</span><span class="p">:</span> <span class="s2">&quot;jpidrAsPWDTTHhbBf9BCn5suWHQJqhynVi&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;f53b09afcf9e1758a7b647f2f738c86426cabfc1&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="23%" />
+<col width="17%" />
+<col width="14%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">success</td>
+<td>Boolean</td>
+<td colspan="2">请求结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">choices</td>
+<td>Array</td>
+<td colspan="2">支付选择数组</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">choice</td>
+<td>Object</td>
+<td colspan="2">支付选择项</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">key</td>
+<td>String</td>
+<td colspan="2">支付选择的标识</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h3>支付请求<a class="headerlink" href="api2_doc.html#id6" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:source_address}/payments，POST方法</p>
+<p>接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="15%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>source_address</td>
+<td>String</td>
+<td>支付方的井通地址</td>
+</tr>
+</tbody>
+</table>
+<p>提交参数详情：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="23%" />
+<col width="17%" />
+<col width="14%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">secret</td>
+<td>String</td>
+<td colspan="2">支付方的钱包私钥</td>
+</tr>
+<tr class="row-odd"><td colspan="3">client_id</td>
+<td>String</td>
+<td colspan="2">此次请求的交易单号，交易单需要唯一</td>
+</tr>
+<tr class="row-even"><td colspan="3">payment</td>
+<td>Object</td>
+<td colspan="2">支付对象</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">source</td>
+<td>String</td>
+<td colspan="2">发起账号</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">destination</td>
+<td>String</td>
+<td colspan="2">目标账号</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">amount</td>
+<td>Object</td>
+<td colspan="2">支付金额</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">choice</td>
+<td>String</td>
+<td colspan="2">支付选择的key，可选</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">memos</td>
+<td>Array</td>
+<td colspan="2">支付的备注，String数组，可选</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/accounts/jQNdYXxgNHY49oxDL8mrjr7J6k7tdNy1kM/payments
+</pre></div>
+</div>
+<p>提交的数据：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;snxVJXMkURjrscL7gfwfWcywYzPkL&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;109&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;payment&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;jQNdYXxgNHY49oxDL8mrjr7J6k7tdNy1kM&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;destination&quot;</span><span class="p">:</span> <span class="s2">&quot;jD2RbZEpBG3T6iWDPyPiNBvpU8sAhRYbpZ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;1.00&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;AAA&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;issuer&quot;</span><span class="p">:</span> <span class="s2">&quot;jMhLAPaNFo288PNo5HMC37kg6ULjJg8vPf&quot;</span>
+    <span class="p">},</span>
+        <span class="nt">&quot;choice&quot;</span><span class="p">:</span> <span class="s2">&quot;f53b09afcf9e1758a7b647f2f738c86426cabfc1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;memos&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;hello world&quot;</span><span class="p">,</span> <span class="s2">&quot;hello payment&quot;</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;109&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;0FE129880597A2681A7CDEA6098C19DA0EB97787FB09F0C1966AAD640D991BB5&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="s2">&quot;tesSUCCESS&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="mi">1430324150</span><span class="p">,</span>
+  <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.000012&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>结果返回参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="10%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>success</td>
+<td>Boolean</td>
+<td>请求结果</td>
+</tr>
+<tr class="row-odd"><td>client_id</td>
+<td>String</td>
+<td>支付交易单号</td>
+</tr>
+<tr class="row-even"><td>hash</td>
+<td>String</td>
+<td>支付交易Hash</td>
+</tr>
+<tr class="row-odd"><td>result</td>
+<td>String</td>
+<td>支付交易的服务器结果，tesSUCCESS表示成功，其他类型详见错误信息</td>
+</tr>
+<tr class="row-even"><td>date</td>
+<td>Integer</td>
+<td>交易时间，UNIXTIME</td>
+</tr>
+<tr class="row-odd"><td>fee</td>
+<td>String</td>
+<td>交易费用，井通计价</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id7">
+<h3>获得支付信息<a class="headerlink" href="api2_doc.html#id7" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:address}/payments/{:id}，GET方法</p>
+<p>接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="10%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address</td>
+<td>String</td>
+<td>支付用户的井通地址</td>
+</tr>
+<tr class="row-odd"><td>id</td>
+<td>String</td>
+<td>支付交易的hash或资源号</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/accounts/jsqRs9BDCjyTuRWEPZk3yHa4MFmRi9D834/payments/D0BF25B015A6BF94
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="mi">1427828830</span><span class="p">,</span>
+  <span class="nt">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;D0BF25B015A6BF94F0645FBBC17B599E546B5DBECD5BBC23C1CB64F83C80A76B&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;sent&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.000012&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="s2">&quot;tesSUCCESS&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;memos&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;hello world&quot;</span><span class="p">,</span> <span class="s2">&quot;hello payment&quot;</span><span class="p">]</span>
+  <span class="s2">&quot;counterparty&quot;</span><span class="p">:</span> <span class="s2">&quot;jsPVrt5C97gbNXx9S1DzBZvXETkWbmHgFQ&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;CNY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;issuer&quot;</span><span class="p">:</span> <span class="s2">&quot;jsPVrt5C97gbNXx9S1DzBZvXETkWbmHgFQ&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;effects&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="10%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>success</td>
+<td>Boolean</td>
+<td>请求结果</td>
+</tr>
+<tr class="row-odd"><td>date</td>
+<td>Integer</td>
+<td>支付时间，UNIXTIME时间</td>
+</tr>
+<tr class="row-even"><td>hash</td>
+<td>String</td>
+<td>支付hash</td>
+</tr>
+<tr class="row-odd"><td>type</td>
+<td>String</td>
+<td>支付类型，sent或received</td>
+</tr>
+<tr class="row-even"><td>fee</td>
+<td>String</td>
+<td>支付费用</td>
+</tr>
+<tr class="row-odd"><td>result</td>
+<td>String</td>
+<td>支付的服务器结果</td>
+</tr>
+<tr class="row-even"><td>memos</td>
+<td>Array</td>
+<td>支付的备注，String数组</td>
+</tr>
+<tr class="row-odd"><td>counterparty</td>
+<td>String</td>
+<td>交易对家</td>
+</tr>
+<tr class="row-even"><td>amount</td>
+<td>Object</td>
+<td>交易金额</td>
+</tr>
+<tr class="row-odd"><td>effects</td>
+<td>Array</td>
+<td>支付的效果，详见下面交易记录效果</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id8">
+<h3>获得支付历史<a class="headerlink" href="api2_doc.html#id8" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:address}/payments，GET方法</p>
+<p>接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="10%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address</td>
+<td>String</td>
+<td>支付相关的井通地址</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/accounts/jnbsmZpkBaGGpPip2A3HujzzWcQvURNGC4/payments?limit=2&amp;marker=59A210AA6ECF92F68D2D7C07
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;payments&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="mi">1430271890</span><span class="p">,</span>
+      <span class="nt">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;9600FFB5966458EB32D6C5344D3F720A59A210AA6ECF92F68D2D7C077C242375&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;sent&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.000012&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="s2">&quot;tesSUCCESS&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;memos&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;hello world&quot;</span><span class="p">,</span> <span class="s2">&quot;hello payment&quot;</span><span class="p">]</span>
+      <span class="s2">&quot;counterparty&quot;</span><span class="p">:</span> <span class="s2">&quot;jP659KPCEa76rf7kUCwoTk9m5ZjGiRXco7&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;8000000001201504081454405641668733216531&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;issuer&quot;</span><span class="p">:</span> <span class="s2">&quot;jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;effects&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果是下一页的数据，返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>success</td>
+<td>Boolean</td>
+<td>请求结果</td>
+</tr>
+<tr class="row-odd"><td>payments</td>
+<td>Array</td>
+<td>支付历史，同交易记录中的信息</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>挂单类接口<a class="headerlink" href="api2_doc.html#id9" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id10">
+<h3>提交挂单<a class="headerlink" href="api2_doc.html#id10" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:address}/orders，POST方法</p>
+<p>接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address</td>
+<td>String</td>
+<td>用户的井通地址</td>
+</tr>
+</tbody>
+</table>
+<p>提交参数详情：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="23%" />
+<col width="17%" />
+<col width="14%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">secret</td>
+<td>String</td>
+<td colspan="2">用户的钱包私钥</td>
+</tr>
+<tr class="row-odd"><td colspan="3">order</td>
+<td>Object</td>
+<td colspan="2">提交的挂单</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">type</td>
+<td>String</td>
+<td colspan="2">挂单的类型，sell或buy</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">pair</td>
+<td>String</td>
+<td colspan="2">交易的货币对</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">amount</td>
+<td>String</td>
+<td colspan="2">挂单的数量</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">price</td>
+<td>String</td>
+<td colspan="2">挂单的价格</td>
+</tr>
+</tbody>
+</table>
+<p>POST需要提交的参数格式如下：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;snUaJxp2k4WFt5LCCtEx2zjThQhpT&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;sell&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;SWT/CNY:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;100.00&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0124&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/accounts/jf96oSdxU7kwfCHF2sjm9GmcvhFBcfN8Py/orders
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;71AE74B03DE3B9A06C559AD4D173A362D96B7D2A5AA35F56B9EF21543D627F34&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="s2">&quot;tesSUCCESS&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.000012&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">99</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>success</td>
+<td>Boolean</td>
+<td>请求结果</td>
+</tr>
+<tr class="row-odd"><td>hash</td>
+<td>String</td>
+<td>交易hash</td>
+</tr>
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>交易结果</td>
+</tr>
+<tr class="row-odd"><td>fee</td>
+<td>String</td>
+<td>交易费用，井通计价</td>
+</tr>
+<tr class="row-even"><td>sequence</td>
+<td>Integer</td>
+<td>交易单子序号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id11">
+<h3>取消挂单<a class="headerlink" href="api2_doc.html#id11" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:address}/orders/{:order}，DELETE方法</p>
+<p>DELETE方法请求时需设置Content-Length消息头</p>
+<p>接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address</td>
+<td>String</td>
+<td>挂单方的井通地址</td>
+</tr>
+<tr class="row-odd"><td>order</td>
+<td>String</td>
+<td>订单的序号</td>
+</tr>
+</tbody>
+</table>
+<p>提交参数详情：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>secret</td>
+<td>String</td>
+<td>井通钱包私钥</td>
+</tr>
+</tbody>
+</table>
+<p>DELETE需要提交的参数格式如下：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;snUaJxp2k4WFt5LCCtEx2zjThQhpT&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/accounts/jJHPjyMfaKDVfCjuKdn8zFmYZVYXg7akeJ/orders/84
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;31E59895D920F05A913D24808D1EE0392562B1DE3053FF72C15758476EA8A6C0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.000012&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">86</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>success</td>
+<td>Boolean</td>
+<td>请求结果</td>
+</tr>
+<tr class="row-odd"><td>hash</td>
+<td>String</td>
+<td>交易hash</td>
+</tr>
+<tr class="row-even"><td>fee</td>
+<td>String</td>
+<td>交易费用，井通计价</td>
+</tr>
+<tr class="row-odd"><td>sequence</td>
+<td>Integer</td>
+<td>操作订单序列号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id12">
+<h3>获取用户挂单<a class="headerlink" href="api2_doc.html#id12" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:address}/orders，GET方法</p>
+<p>接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address</td>
+<td>String</td>
+<td>挂单方的井通地址</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost /v2/accounts/jf96oSdxU7kwfCHF2sjm9GmcvhFBcfN8Py/orders
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;orders&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;buy&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;800000000000000000000000A95EFD7EC3101635:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f/CNY:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;119815.98&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0124&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">4</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;buy&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;800000000000000000000000A95EFD7EC3101635:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f/CNY:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;10000.00&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0100&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">33</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;buy&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;800000000000000000000000A95EFD7EC3101635:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f/CNY:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;10000.00&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0100&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">34</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;sell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;800000000000000000000000A95EFD7EC3101635:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f/CNY:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;98300&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0100&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">242</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;sell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;800000000000000000000000A95EFD7EC3101635:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f/CNY:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;16400.00&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0100&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">244</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;sell&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;800000000000000000000000A95EFD7EC3101635:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f/CNY:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;18500.00&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0100&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">246</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="23%" />
+<col width="17%" />
+<col width="14%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">success</td>
+<td>Boolean</td>
+<td colspan="2">请求结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">order</td>
+<td>Object</td>
+<td colspan="2">单子信息</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">type</td>
+<td>String</td>
+<td colspan="2">挂单的类型，sell或buy</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">pair</td>
+<td>String</td>
+<td colspan="2">交易的货币对</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">amount</td>
+<td>String</td>
+<td colspan="2">挂单的数量</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">price</td>
+<td>String</td>
+<td colspan="2">挂单的价格</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">sequence</td>
+<td>Integer</td>
+<td colspan="2">交易序列号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id13">
+<h3>获取挂单信息<a class="headerlink" href="api2_doc.html#id13" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:address}/orders/{:hash}，GET方法</p>
+<p>通用接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address</td>
+<td>String</td>
+<td>挂单方的井通地址</td>
+</tr>
+<tr class="row-odd"><td>hash</td>
+<td>String</td>
+<td>挂单交易哈希号</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/accounts/jf96oSdxU7kwfCHF2sjm9GmcvhFBcfN8Py/orders/6ECFE85BDB388AFCD2A
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;6ECFE85BDB388AFCD2AD6BC766F5B47C26DCFCF3D05ED0226AFB849EA799577F&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.000012&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;order_create&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;jf96oSdxU7kwfCHF2sjm9GmcvhFBcfN8Py&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;SWT/CNY:janxMdrWE2SUzTqRUtfycH4UGewMMeHa9f&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;1.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0000&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;buy&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">761</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="23%" />
+<col width="17%" />
+<col width="14%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">success</td>
+<td>Boolean</td>
+<td colspan="2">请求结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">hash</td>
+<td>String</td>
+<td colspan="2">交易Hash</td>
+</tr>
+<tr class="row-even"><td colspan="3">fee</td>
+<td>String</td>
+<td colspan="2">交易费用，井通计价</td>
+</tr>
+<tr class="row-odd"><td colspan="3">action</td>
+<td>String</td>
+<td colspan="2">交易的动作类型</td>
+</tr>
+<tr class="row-even"><td colspan="3">order</td>
+<td>Object</td>
+<td colspan="2">交易单子信息</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">account</td>
+<td>String</td>
+<td colspan="2">交易帐号</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">pair</td>
+<td>String</td>
+<td colspan="2">交易的货币对</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">amount</td>
+<td>String</td>
+<td colspan="2">挂单的数量</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">price</td>
+<td>String</td>
+<td colspan="2">挂单的价格</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">type</td>
+<td>Integer</td>
+<td colspan="2">交易类型，sell或buy</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">sequence</td>
+<td>Integer</td>
+<td colspan="2">交易序列号</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id14">
+<h3>获得货币对的挂单列表<a class="headerlink" href="api2_doc.html#id14" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/order_book/{:base}/{:counter}，GET方法</p>
+<p>通用接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>base</td>
+<td>String</td>
+<td>基准货币（currency+counterparty）</td>
+</tr>
+<tr class="row-odd"><td>counter</td>
+<td>String</td>
+<td>目标货币（currency+counterparty）</td>
+</tr>
+</tbody>
+</table>
+<p>可选接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>results_per_page</td>
+<td>Integer</td>
+<td>返回的每页数据量，默认每页买卖单各10项）</td>
+</tr>
+<tr class="row-odd"><td>page</td>
+<td>Integer</td>
+<td>页码，默认从第一页开始</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/order_book/CNY+jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/USD+jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;CNY:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/USD:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;bids&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="p">{</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.66&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;funded&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="nt">&quot;order_maker&quot;</span><span class="p">:</span> <span class="s2">&quot;jhBGoRtU9MxLeipYyvtbbZxk9cLD5c35MP&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">448</span><span class="p">,</span>
+      <span class="nt">&quot;passive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;sell&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;asks&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="p">{</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.82333&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;funded&quot;</span><span class="p">:</span> <span class="mi">158000</span><span class="p">,</span>
+      <span class="nt">&quot;order_maker&quot;</span><span class="p">:</span> <span class="s2">&quot;jU7uJxzJttKdyeNenaN7KCyfcb9gy99KKc&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">960</span><span class="p">,</span>
+      <span class="nt">&quot;passive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;sell&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+<span class="p">{</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.88&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;funded&quot;</span><span class="p">:</span> <span class="mf">81.84</span><span class="p">,</span>
+      <span class="nt">&quot;order_maker&quot;</span><span class="p">:</span> <span class="s2">&quot;js46SK8GtxSeGRR6hszxozFxftEnwEK8my&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="nt">&quot;passive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;sell&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;funded&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;order_maker&quot;</span><span class="p">:</span> <span class="s2">&quot;j3AxmnN7ZE4EUTiD7CTWRdEYsQk4tEpMVQ&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span>
+      <span class="nt">&quot;passive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;sell&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;funded&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;order_maker&quot;</span><span class="p">:</span> <span class="s2">&quot;j3WBq56fYBaJGRhex3RJGTVFFLfhZeSkR7&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+      <span class="nt">&quot;passive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;sell&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="23%" />
+<col width="17%" />
+<col width="14%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">success</td>
+<td>Boolean</td>
+<td colspan="2">调用结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">pair</td>
+<td>String</td>
+<td colspan="2">挂单货币对</td>
+</tr>
+<tr class="row-even"><td colspan="3">bids/asks</td>
+<td>Array</td>
+<td colspan="2">买入单</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">price</td>
+<td>Object</td>
+<td colspan="2">该档的价格</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">funded</td>
+<td>Integer</td>
+<td colspan="2">实际中用户可以成交的金额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">order_maker</td>
+<td>String</td>
+<td colspan="2">挂单用户</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">sequence</td>
+<td>String</td>
+<td colspan="2">交易序号</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">passive</td>
+<td>Boolean</td>
+<td colspan="2">交易是否是被动交易</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id15">
+<h3>获得货币对的买单列表<a class="headerlink" href="api2_doc.html#id15" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/order_book/bids/{:base}/{:counter}，GET方法</p>
+<p>通用接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>base</td>
+<td>String</td>
+<td>基准货币（currency+counterparty）</td>
+</tr>
+<tr class="row-odd"><td>counter</td>
+<td>String</td>
+<td>目标货币（currency+counterparty）</td>
+</tr>
+</tbody>
+</table>
+<p>可选接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>results_per_page</td>
+<td>Integer</td>
+<td>返回的每页数据量，默认每页买卖单各10项）</td>
+</tr>
+<tr class="row-odd"><td>page</td>
+<td>Integer</td>
+<td>页码，默认从第一页开始</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/order_book/bids/SWT/CNY+jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS?results_per_page=3&amp;page=2
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;SWT/CNY:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;bids&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.97&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;order_maker&quot;</span><span class="p">:</span> <span class="s2">&quot;jhBGoRtU9MxLeipYyvtbbZxk9cLD5c35MP&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+      <span class="nt">&quot;passive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;sell&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;funded&quot;</span><span class="p">:</span> <span class="mf">0.32</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.96999&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;order_maker&quot;</span><span class="p">:</span> <span class="s2">&quot;jhBGoRtU9MxLeipYyvtbbZxk9cLD5c35MP&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">48</span><span class="p">,</span>
+      <span class="nt">&quot;passive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;sell&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;funded&quot;</span><span class="p">:</span> <span class="mf">0.31</span>
+    <span class="p">},</span>
+        <span class="p">{</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.95999&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;order_maker&quot;</span><span class="p">:</span> <span class="s2">&quot;jhBGoRtU9MxLeipYyvtbbZxk9cLD5c35MP&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">448</span><span class="p">,</span>
+      <span class="nt">&quot;passive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;sell&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;funded&quot;</span><span class="p">:</span> <span class="mf">8.999</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="23%" />
+<col width="17%" />
+<col width="14%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">success</td>
+<td>Boolean</td>
+<td colspan="2">调用结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">pair</td>
+<td>String</td>
+<td colspan="2">挂单货币对</td>
+</tr>
+<tr class="row-even"><td colspan="3">bids/asks</td>
+<td>Array</td>
+<td colspan="2">买入单</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">price</td>
+<td>Object</td>
+<td colspan="2">该档的价格</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">funded</td>
+<td>Integer</td>
+<td colspan="2">实际中用户可以成交的金额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">order_maker</td>
+<td>String</td>
+<td colspan="2">挂单用户</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">sequence</td>
+<td>String</td>
+<td colspan="2">交易序号</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">passive</td>
+<td>Boolean</td>
+<td colspan="2">交易是否是被动交易</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id16">
+<h3>获得货币对的卖单列表<a class="headerlink" href="api2_doc.html#id16" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/order_book/asks/{:base}/{:counter}，GET方法</p>
+<p>通用接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>base</td>
+<td>String</td>
+<td>基准货币（currency+counterparty）</td>
+</tr>
+<tr class="row-odd"><td>counter</td>
+<td>String</td>
+<td>目标货币（currency+counterparty）</td>
+</tr>
+</tbody>
+</table>
+<p>可选接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>results_per_page</td>
+<td>Integer</td>
+<td>返回的每页数据量，默认每页买卖单各10项）</td>
+</tr>
+<tr class="row-odd"><td>page</td>
+<td>Integer</td>
+<td>页码，默认从第一页开始</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/order_book/asks/SWT/CNY+jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/USD?results_per_page=2&amp;page=3
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;SWT/CNY:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;asks&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.82333&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;order_maker&quot;</span><span class="p">:</span> <span class="s2">&quot;jU7uJxzJttKdyeNenaN7KCyfcb9gy99KKc&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">960</span><span class="p">,</span>
+      <span class="nt">&quot;passive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;sell&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;funded&quot;</span><span class="p">:</span> <span class="mi">158000</span>
+    <span class="p">},</span>
+        <span class="p">{</span>
+      <span class="nt">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;0.88&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;order_maker&quot;</span><span class="p">:</span> <span class="s2">&quot;js46SK8GtxSeGRR6hszxozFxftEnwEK8my&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;sequence&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+      <span class="nt">&quot;passive&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;sell&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;funded&quot;</span><span class="p">:</span> <span class="mf">81.84</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id17">
+<h2>交易记录接口<a class="headerlink" href="api2_doc.html#id17" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id18">
+<h3>查询交易信息<a class="headerlink" href="api2_doc.html#id18" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:address}/transactions/{:id}，GET方法</p>
+<p>接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address</td>
+<td>String</td>
+<td>井通钱包地址</td>
+</tr>
+<tr class="row-odd"><td>id</td>
+<td>String</td>
+<td>交易资源号或者交易hash</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/accounts/jsqRs9BDCjyTuRWEPZk3yHa4MFmRi9D834/transactions/264ECE86AF9A830405B71C9A9FDB6807AC55525CA73E6DD1C61621F33D13F749
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;transaction&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="mi">1427265660</span><span class="p">,</span>
+    <span class="nt">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;264ECE86AF9A830405B71C9A9FDB6807AC55525CA73E6DD1C61621F33D13F749&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;sent&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.000012&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="s2">&quot;tesSUCCESS&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;counterparty&quot;</span><span class="p">:</span> <span class="s2">&quot;j3AxmnN7ZE4EUTiD7CTWRdEYsQk4tEpMVQ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;1.3&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;CNY&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;issuer&quot;</span><span class="p">:</span> <span class="s2">&quot;j3AxmnN7ZE4EUTiD7CTWRdEYsQk4tEpMVQ&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;effects&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="23%" />
+<col width="17%" />
+<col width="14%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">success</td>
+<td>Boolean</td>
+<td colspan="2">请求结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">transaction</td>
+<td>Object</td>
+<td colspan="2">具体的交易信息</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">date</td>
+<td>Integer</td>
+<td colspan="2">交易时间，UNIXTIME</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">hash</td>
+<td>Object</td>
+<td colspan="2">交易hash</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">type</td>
+<td>Object</td>
+<td colspan="2">交易类型</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">fee</td>
+<td>Object</td>
+<td colspan="2">交易费用，井通计价</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">result</td>
+<td>Object</td>
+<td colspan="2">交易结果</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">counterparty</td>
+<td>Object</td>
+<td colspan="2">交易对家</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">amount</td>
+<td>Object</td>
+<td colspan="2">交易金额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">effects</td>
+<td>Object</td>
+<td colspan="2">交易效果，详见下面分析</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id19">
+<h3>查询交易记录<a class="headerlink" href="api2_doc.html#id19" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:address}/transactions，GET方法</p>
+<p>接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address</td>
+<td>String</td>
+<td>支付相关的井通地址</td>
+</tr>
+</tbody>
+</table>
+<p>可选接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="22%" />
+<col width="16%" />
+<col width="14%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">results_per_page</td>
+<td>Integer</td>
+<td colspan="2">返回的每页数据量，默认每页10项</td>
+</tr>
+<tr class="row-odd"><td colspan="3">marker</td>
+<td>Object</td>
+<td colspan="2">交易记录标记，表示从当前记录继续向下查找</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">ledger</td>
+<td>Integer</td>
+<td colspan="2">账本号</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">seq</td>
+<td>Integer</td>
+<td colspan="2">上一次查询返回的最后一条交易号</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/accounts/jHZ5pAKGcpCdvU8N177eePYtMY4ZtC85o6/transactions?results_per_page=5&amp;marker={ledger:6946767,seq:0}
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>{
+  &quot;success&quot;: true,
+  &quot;status_code&quot;: 0,
+  &quot;marker&quot;: {
+    &quot;ledger&quot;: 6946759,
+        &quot;seq&quot;: 0
+},
+  &quot;transactions&quot;: [
+    {
+      &quot;date&quot;: 1464163090,
+      &quot;hash&quot;: &quot;DCFB219EB792CAB190EFE49004D341624AA3444F99CEFD1FDABF1D2AF2716C9C&quot;,
+      &quot;type&quot;: &quot;offereffect&quot;,
+      &quot;fee&quot;: &quot;0.000012&quot;,
+      &quot;result&quot;: &quot;tesSUCCESS&quot;,
+      &quot;memos&quot;: [ ],
+      &quot;effects&quot;: [
+        {
+          &quot;effect&quot;: &quot;offer_partially_funded&quot;,
+          &quot;type&quot;: &quot;bought&quot;,
+          &quot;price&quot;: &quot;2&quot;,
+          &quot;seq&quot;: 3,
+          &quot;pair&quot;: &quot;8300000031000020160525203205280120000003:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/8200000031000020160525202905250120000003:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;,
+          &quot;amount&quot;: &quot;1.00&quot;,
+          &quot;price&quot;: &quot;2.0000&quot;,
+          &quot;counterparty&quot;: {
+            &quot;account&quot;: &quot;jf16TmdHVXuaVNhFDEg4MVeGWiEhsCMRF4&quot;,
+            &quot;seq&quot;: 10,
+            &quot;hash&quot;: &quot;DCFB219EB792CAB190EFE49004D341624AA3444F99CEFD1FDABF1D2AF2716C9C&quot;
+          },
+          &quot;remaining&quot;: true
+        }
+      ]
+    },
+    {
+      &quot;date&quot;: 1464160770,
+      &quot;hash&quot;: &quot;D48B7D8B319D3EBC30CB2ED85E45A12208F199A69E51AAB2291AB94A6B79AF68&quot;,
+      &quot;type&quot;: &quot;offernew&quot;,
+      &quot;fee&quot;: &quot;0.000012&quot;,
+      &quot;result&quot;: &quot;tesSUCCESS&quot;,
+      &quot;memos&quot;: [ ],
+      &quot;offertype&quot;: &quot;buy&quot;,
+      &quot;seq&quot;: 3,
+      &quot;pair&quot;: &quot;8300000031000020160525203205280120000003:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/8200000031000020160525202905250120000003:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;,
+      &quot;amount&quot;: &quot;2.00&quot;,
+      &quot;price&quot;: &quot;5.0000&quot;,
+      &quot;effects&quot;: [
+        {
+          &quot;effect&quot;: &quot;offer_created&quot;,
+          &quot;type&quot;: &quot;buy&quot;,
+          &quot;pair&quot;: &quot;8300000031000020160525203205280120000003:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/8200000031000020160525202905250120000003:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;,
+          &quot;amount&quot;: &quot;5.00&quot;,
+          &quot;price&quot;: &quot;2.0000&quot;,
+          &quot;seq&quot;: 3
+        }
+      ]
+    },
+    {
+      &quot;date&quot;: 1464158680,
+      &quot;hash&quot;: &quot;2AE79F8EC6B71BC10F148F9DB6791B9B363C91D9D8F0B2BB45177A761998D4F3&quot;,
+      &quot;type&quot;: &quot;offercancel&quot;,
+      &quot;fee&quot;: &quot;0.000012&quot;,
+      &quot;result&quot;: &quot;tesSUCCESS&quot;,
+      &quot;memos&quot;: [ ],
+      &quot;offertype&quot;: &quot;buy&quot;,
+      &quot;pair&quot;: &quot;8300000022000020151029201910310120000002:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/8200000031000020160525202905250120000003:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;,
+      &quot;amount&quot;: &quot;1.00&quot;,
+      &quot;price&quot;: &quot;2.0000&quot;,
+      &quot;seq&quot;: 2,
+      &quot;effects&quot;: [
+        {
+          &quot;effect&quot;: &quot;offer_cancelled&quot;,
+          &quot;pair&quot;: &quot;8300000022000020151029201910310120000002:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/8200000031000020160525202905250120000003:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;,
+          &quot;amount&quot;: &quot;1.00&quot;,
+          &quot;price&quot;: &quot;2.0000&quot;,
+          &quot;seq&quot;: 1,
+          &quot;hash&quot;: &quot;DB1B6CEDADAACFFEDDEC48FCD12A841F858ABACE3575B46D96E1EA05C86091E0&quot;,
+          &quot;deleted&quot;: true
+        }
+      ]
+    },
+    {
+      &quot;date&quot;: 1464161640,
+      &quot;hash&quot;: &quot;F0DF19E6809909744DC07E5B4CC8F9B294846658912C3DBC5DAD8343316C39B8&quot;,
+      &quot;type&quot;: &quot;received&quot;,
+      &quot;fee&quot;: &quot;0.000012&quot;,
+      &quot;result&quot;: &quot;tesSUCCESS&quot;,
+      &quot;memos&quot;: [ ],
+      &quot;counterparty&quot;: &quot;jfpZh2698t7RcAVpboyfx5bDL29dGyp5Ve&quot;,
+      &quot;amount&quot;: {
+        &quot;value&quot;: &quot;1&quot;,
+        &quot;currency&quot;: &quot;8200000031000020160525202905250120000003&quot;,
+        &quot;issuer&quot;: &quot;jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;
+      },
+      &quot;effects&quot;: [ ]
+    },
+    {
+      &quot;date&quot;: 1464160770,
+      &quot;hash&quot;: &quot;D48B7D8B319D3EBC30CB2ED85E45A12208F199A69E51AAB2291AB94A6B79AF68&quot;,
+      &quot;type&quot;: &quot;offernew&quot;,
+      &quot;fee&quot;: &quot;0.000012&quot;,
+      &quot;result&quot;: &quot;tesSUCCESS&quot;,
+      &quot;client_resource_id&quot;: &quot;&quot;,
+      &quot;memos&quot;: [ ],
+      &quot;offertype&quot;: &quot;buy&quot;,
+      &quot;seq&quot;: 3,
+      &quot;pair&quot;: &quot;8300000022000020151029201910310120000002:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/8200000031000020160525202905250120000003:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;,
+      &quot;amount&quot;: &quot;5.00&quot;,
+      &quot;price&quot;: &quot;2.0000&quot;,
+      &quot;effects&quot;: [
+        {
+          &quot;effect&quot;: &quot;offer_created&quot;,
+          &quot;type&quot;: &quot;buy&quot;,
+          &quot;pair&quot;: &quot;8300000022000020151029201910310120000002:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/8200000031000020160525202905250120000003:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;,
+          &quot;amount&quot;: &quot;5.00&quot;,
+          &quot;price&quot;: &quot;2.0000&quot;,
+          &quot;seq&quot;: 3
+        }
+      ]
+    }
+  ]
+}
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="20%" />
+<col width="15%" />
+<col width="13%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">success</td>
+<td>Boolean</td>
+<td colspan="2">调用结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">marker</td>
+<td>Object</td>
+<td colspan="2">交易记录标记</td>
+</tr>
+<tr class="row-even"><td colspan="3">transactions</td>
+<td>Array</td>
+<td colspan="2">具体的交易信息数组</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">date</td>
+<td>Integer</td>
+<td colspan="2">交易时间，UNIXTIME</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">hash</td>
+<td>String</td>
+<td colspan="2">交易hash</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">type</td>
+<td>String</td>
+<td colspan="2">交易类型</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">fee</td>
+<td>String</td>
+<td colspan="2">交易费用，井通计价</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">result</td>
+<td>String</td>
+<td colspan="2">交易结果</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">memos</td>
+<td>String</td>
+<td colspan="2">交易备注</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">counterparty</td>
+<td>String</td>
+<td colspan="2">交易对家，支付交易才有</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">amount</td>
+<td>String</td>
+<td colspan="2">交易金额/挂单数量，支付交易或者挂单交易才有</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">offertype</td>
+<td>String</td>
+<td colspan="2">挂单类型，sell或者buy，挂单交易才有</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">pair</td>
+<td>String</td>
+<td colspan="2">交易的货币对，挂单交易才有</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">price</td>
+<td>String</td>
+<td colspan="2">挂单的价格，挂单交易才有</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">effects</td>
+<td>Object</td>
+<td colspan="2">交易效果，详见如下</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id20">
+<h3>交易记录信息<a class="headerlink" href="api2_doc.html#id20" title="永久链接至标题">¶</a></h3>
+<p>用户提交的交易类型主要有Payment、OfferCreate、OfferCancel和RelationSet；</p>
+<p>交易信息存储在系统中，查询交易信息时，系统解析交易信息，将交易信息解析为主要有如下信息：</p>
+<p>date                 交易时间UNIXTIME
+hash                 交易hash
+fee                  交易费用
+result               交易结果
+client_resource_id   交易资源号
+memos                交易的备注信息
+type                 交易类型</p>
+<p>type有如下几种：</p>
+<ol class="arabic simple">
+<li>sent，用户进行支付操作，在交易信息中包含的信息有：</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="20%" />
+<col width="15%" />
+<col width="13%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">counterparty</td>
+<td>String</td>
+<td colspan="2">支付对家，即接收方</td>
+</tr>
+<tr class="row-odd"><td colspan="3">amount</td>
+<td>Object</td>
+<td colspan="2">交易记录标记</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">value</td>
+<td>String</td>
+<td colspan="2">金额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">currency</td>
+<td>String</td>
+<td colspan="2">货币</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">issuer</td>
+<td>String</td>
+<td colspan="2">货币发行方，SWT为空</td>
+</tr>
+<tr class="row-odd"><td colspan="3">effects</td>
+<td>Array</td>
+<td colspan="2">[]，空</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>received，用户接受支付，在交易信息中包含的信息有：</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="20%" />
+<col width="15%" />
+<col width="13%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">counterparty</td>
+<td>String</td>
+<td colspan="2">支付对家，即接收方</td>
+</tr>
+<tr class="row-odd"><td colspan="3">amount</td>
+<td>Object</td>
+<td colspan="2">交易记录标记</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">value</td>
+<td>String</td>
+<td colspan="2">金额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">currency</td>
+<td>String</td>
+<td colspan="2">货币</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">issuer</td>
+<td>String</td>
+<td colspan="2">货币发行方，SWT为空</td>
+</tr>
+<tr class="row-odd"><td colspan="3">effects</td>
+<td>Array</td>
+<td colspan="2">[]，空</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
+<li>convert，用户进行兑换操作，在交易信息中包含的信息有：</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="20%" />
+<col width="15%" />
+<col width="13%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">spent</td>
+<td>Object</td>
+<td colspan="2">兑换支付的金额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">value</td>
+<td>String</td>
+<td colspan="2">金额</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">currency</td>
+<td>String</td>
+<td colspan="2">货币</td>
+</tr>
+<tr class="row-odd"><td colspan="3"><div class="first last line-block">
+<div class="line">issuer</div>
+</div>
+</td>
+<td>String</td>
+<td colspan="2">货币发行方，SWT为空</td>
+</tr>
+<tr class="row-even"><td colspan="3">amount</td>
+<td>Object</td>
+<td colspan="2">交易记录标记</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">value</td>
+<td>String</td>
+<td colspan="2">金额</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">currency</td>
+<td>String</td>
+<td colspan="2">货币</td>
+</tr>
+<tr class="row-odd"><td colspan="3"><div class="first last line-block">
+<div class="line">issuer</div>
+</div>
+</td>
+<td>String</td>
+<td colspan="2">货币发行方，SWT为空</td>
+</tr>
+<tr class="row-even"><td colspan="3">effects</td>
+<td>Array</td>
+<td colspan="2">[]，空</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="4">
+<li>offernew，用户进行挂单操作，在交易信息中包含的信息有：</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>offertype</td>
+<td>String</td>
+<td>挂单类型，sell或buy</td>
+</tr>
+<tr class="row-odd"><td>pair</td>
+<td>String</td>
+<td>交易的货币对</td>
+</tr>
+<tr class="row-even"><td>amount</td>
+<td>String</td>
+<td>挂单的数量</td>
+</tr>
+<tr class="row-odd"><td>price</td>
+<td>String</td>
+<td>挂单的价格</td>
+</tr>
+<tr class="row-even"><td>effects</td>
+<td>Array</td>
+<td>详见下面的effects解释</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="5">
+<li>offercancel，用户进行取消挂单操作，在交易信息中包含的信息有：</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>type</td>
+<td>String</td>
+<td>挂单的类型，sell或buy</td>
+</tr>
+<tr class="row-odd"><td>pair</td>
+<td>String</td>
+<td>交易的货币对</td>
+</tr>
+<tr class="row-even"><td>amount</td>
+<td>String</td>
+<td>挂单的数量</td>
+</tr>
+<tr class="row-odd"><td>price</td>
+<td>String</td>
+<td>挂单的价格</td>
+</tr>
+<tr class="row-even"><td>effects</td>
+<td>Array</td>
+<td>详见下面的effects解释</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="6">
+<li>offereffect，挂单成交情况，即被动成交的情况，在交易信息中包含的信息有：</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>effects</td>
+<td>Array</td>
+<td>详见下面的effects解释</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="effects">
+<h3>交易效果effects<a class="headerlink" href="api2_doc.html#effects" title="永久链接至标题">¶</a></h3>
+<p>effects是每个用户交易记录信息里面的交易效果，是个JSON数组，数字可以包含多项，每项内容都包含效果类型effect字段，根据effect的不同里面的内容也不同
+：</p>
+<ol class="arabic simple">
+<li>offer_funded，交易实际成交；交易提示信息建议：交易成交，您以XXX价格买了/卖了XXX卖了/买了XXX，价格是XXX；其中包含的信息有：</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="20%" />
+<col width="15%" />
+<col width="13%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">effect</td>
+<td>String</td>
+<td colspan="2">offer_funded</td>
+</tr>
+<tr class="row-odd"><td colspan="3">type</td>
+<td>String</td>
+<td colspan="2">交易类型，sell或buy</td>
+</tr>
+<tr class="row-even"><td colspan="3">pair</td>
+<td>String</td>
+<td colspan="2">交易的货币对</td>
+</tr>
+<tr class="row-odd"><td colspan="3">amount</td>
+<td>String</td>
+<td colspan="2">挂单的数量</td>
+</tr>
+<tr class="row-even"><td colspan="3">got</td>
+<td>Object</td>
+<td colspan="2">用户获得的金额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">value</td>
+<td>String</td>
+<td colspan="2">金额</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">currency</td>
+<td>String</td>
+<td colspan="2">货币</td>
+</tr>
+<tr class="row-odd"><td colspan="3"><div class="first last line-block">
+<div class="line">issuer</div>
+</div>
+</td>
+<td>String</td>
+<td colspan="2">货币发行方，SWT为空</td>
+</tr>
+<tr class="row-even"><td colspan="3">paid</td>
+<td>Object</td>
+<td colspan="2">用户付出的金额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">value</td>
+<td>String</td>
+<td colspan="2">金额</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">currency</td>
+<td>String</td>
+<td colspan="2">货币</td>
+</tr>
+<tr class="row-odd"><td colspan="3"><div class="first last line-block">
+<div class="line">issuer</div>
+</div>
+</td>
+<td>String</td>
+<td colspan="2">货币发行方，SWT为空</td>
+</tr>
+<tr class="row-even"><td colspan="3">price</td>
+<td>String</td>
+<td colspan="2">价格，4位小数</td>
+</tr>
+<tr class="row-odd"><td colspan="3">seq</td>
+<td>Integer</td>
+<td colspan="2">挂单序号，表示被成交的单子</td>
+</tr>
+<tr class="row-even"><td colspan="3">counterparty</td>
+<td>Object</td>
+<td colspan="2">对家信息</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">account</td>
+<td>String</td>
+<td colspan="2">对家账号</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">seq</td>
+<td>Integer</td>
+<td colspan="2">对家单子序号</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">hash</td>
+<td>String</td>
+<td colspan="2">对家交易hash</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>offer_partially_funded，交易部分成交；交易提示信息建议：交易部分成交，您以XXX价格买了/卖了XXX卖了/买了XXX，价格是XXX，剩余挂单由于金额不足被取消（可选，根据cancelled），还剩XXX单子（可选，根据remaining）；其中包含的信息有：</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="20%" />
+<col width="15%" />
+<col width="13%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">effect</td>
+<td>String</td>
+<td colspan="2">offer_partially_funded</td>
+</tr>
+<tr class="row-odd"><td colspan="3">type</td>
+<td>String</td>
+<td colspan="2">交易类型，sold或bought</td>
+</tr>
+<tr class="row-even"><td colspan="3">got</td>
+<td>Object</td>
+<td colspan="2">用户获得的金额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">value</td>
+<td>String</td>
+<td colspan="2">金额</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">currency</td>
+<td>String</td>
+<td colspan="2">货币</td>
+</tr>
+<tr class="row-odd"><td colspan="3"><div class="first last line-block">
+<div class="line">issuer</div>
+</div>
+</td>
+<td>String</td>
+<td colspan="2">货币发行方，SWT为空</td>
+</tr>
+<tr class="row-even"><td colspan="3">paid</td>
+<td>Object</td>
+<td colspan="2">用户付出的金额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">value</td>
+<td>String</td>
+<td colspan="2">金额</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">currency</td>
+<td>String</td>
+<td colspan="2">货币</td>
+</tr>
+<tr class="row-odd"><td colspan="3"><div class="first last line-block">
+<div class="line">issuer</div>
+</div>
+</td>
+<td>String</td>
+<td colspan="2">货币发行方，SWT为空</td>
+</tr>
+<tr class="row-even"><td colspan="3">price</td>
+<td>String</td>
+<td colspan="2">价格，4位小数</td>
+</tr>
+<tr class="row-odd"><td colspan="3">seq</td>
+<td>Integer</td>
+<td colspan="2">挂单序号，表示被成交的单子</td>
+</tr>
+<tr class="row-even"><td colspan="3">cancelled</td>
+<td colspan="3">Boolean         <a href="api2_doc.html#id21"><span class="problematic" id="id22">|</span></a>剩余的单子是否被取消了，可选</td>
+</tr>
+<tr class="row-odd"><td colspan="3">remaining</td>
+<td>Boolean</td>
+<td colspan="2">是否有剩余的单子，可选</td>
+</tr>
+<tr class="row-even"><td colspan="3">pair</td>
+<td>String</td>
+<td colspan="2">交易的货币对,remaining为true才有</td>
+</tr>
+<tr class="row-odd"><td colspan="3">amount</td>
+<td>String</td>
+<td colspan="2">挂单的数量，remaining为true才有</td>
+</tr>
+<tr class="row-even"><td colspan="3">price</td>
+<td>String</td>
+<td colspan="2">挂单的价格，remaining为true才有</td>
+</tr>
+<tr class="row-odd"><td colspan="3">counterparty</td>
+<td>Object</td>
+<td colspan="2">对家信息</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">account</td>
+<td>String</td>
+<td colspan="2">对家账号</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">seq</td>
+<td>Integer</td>
+<td colspan="2">对家单子序号</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">hash</td>
+<td>String</td>
+<td colspan="2">对家交易hash</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
+<li>offer_cancelled，被关联交易取消单子，交易单子被取消；交易提示信息建议：由于缺少金额单子XXX被取消；其中包含的信息有：</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>effect</td>
+<td>String</td>
+<td>offer_cancelled</td>
+</tr>
+<tr class="row-odd"><td>type</td>
+<td>String</td>
+<td>交易类型，sell或buy</td>
+</tr>
+<tr class="row-even"><td>pair</td>
+<td>String</td>
+<td>交易的货币对</td>
+</tr>
+<tr class="row-odd"><td>amount</td>
+<td>String</td>
+<td>挂单的数量</td>
+</tr>
+<tr class="row-even"><td>price</td>
+<td>String</td>
+<td>挂单的价格</td>
+</tr>
+<tr class="row-odd"><td>seq</td>
+<td>Integer</td>
+<td>被取消单子的序号</td>
+</tr>
+<tr class="row-even"><td>hash</td>
+<td>String</td>
+<td>被取消单子的hash</td>
+</tr>
+<tr class="row-odd"><td>deleted</td>
+<td>Boolean</td>
+<td>单子是否被删除，取消单子为true</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="4">
+<li>offer_created，交易单子创建；交易提示信息建议：您创建了一个买/卖单，以XXX交易XXX；其中包含的信息有：</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>effect</td>
+<td>String</td>
+<td>offer_created</td>
+</tr>
+<tr class="row-odd"><td>type</td>
+<td>String</td>
+<td>交易类型，sell或buy</td>
+</tr>
+<tr class="row-even"><td>pair</td>
+<td>String</td>
+<td>交易的货币对</td>
+</tr>
+<tr class="row-odd"><td>amount</td>
+<td>String</td>
+<td>挂单的数量</td>
+</tr>
+<tr class="row-even"><td>price</td>
+<td>String</td>
+<td>挂单的价格</td>
+</tr>
+<tr class="row-odd"><td>seq</td>
+<td>Integer</td>
+<td>新建的单子序号</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="5">
+<li>offer_bought，挂单买到/卖出，成交的单子信息；交易提示信息建议：您以XXX价格买了/卖了XXX卖了/买了XXX；其中包含的信息有：</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="20%" />
+<col width="15%" />
+<col width="13%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">effect</td>
+<td>String</td>
+<td colspan="2">offer_bought</td>
+</tr>
+<tr class="row-odd"><td colspan="3">type</td>
+<td>String</td>
+<td colspan="2">交易类型，sell或buy</td>
+</tr>
+<tr class="row-even"><td colspan="3">got</td>
+<td>Object</td>
+<td colspan="2">用户获得的金额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">value</td>
+<td>String</td>
+<td colspan="2">金额</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">currency</td>
+<td>String</td>
+<td colspan="2">货币</td>
+</tr>
+<tr class="row-odd"><td colspan="3"><div class="first last line-block">
+<div class="line">issuer</div>
+</div>
+</td>
+<td>String</td>
+<td colspan="2">货币发行方，SWT为空</td>
+</tr>
+<tr class="row-even"><td colspan="3">paid</td>
+<td>Object</td>
+<td colspan="2">用户付出的金额</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">value</td>
+<td>String</td>
+<td colspan="2">金额</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">currency</td>
+<td>String</td>
+<td colspan="2">货币</td>
+</tr>
+<tr class="row-odd"><td colspan="3"><div class="first last line-block">
+<div class="line">issuer</div>
+</div>
+</td>
+<td>String</td>
+<td colspan="2">货币发行方，SWT为空</td>
+</tr>
+<tr class="row-even"><td colspan="3">price</td>
+<td>String</td>
+<td colspan="2">价格，4位小数</td>
+</tr>
+<tr class="row-odd"><td colspan="3">pair</td>
+<td>String</td>
+<td colspan="2">交易的货币对</td>
+</tr>
+<tr class="row-even"><td colspan="3">amount</td>
+<td>String</td>
+<td colspan="2">挂单的数量</td>
+</tr>
+<tr class="row-odd"><td colspan="3">counterparty</td>
+<td>Object</td>
+<td colspan="2">对家信息</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">account</td>
+<td>String</td>
+<td colspan="2">对家账号</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">seq</td>
+<td>Integer</td>
+<td colspan="2">对家单子序号</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">hash</td>
+<td>String</td>
+<td colspan="2">对家交易hash</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>智能合约<a class="headerlink" href="api2_doc.html#id23" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id24">
+<h3>部署合约<a class="headerlink" href="api2_doc.html#id24" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:address}/contract/deploy，POST方法</p>
+<p>接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address</td>
+<td>string</td>
+<td>井通钱包地址</td>
+</tr>
+</tbody>
+</table>
+<p>提交参数详情：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>secret</td>
+<td>String</td>
+<td>用户的钱包私钥</td>
+</tr>
+<tr class="row-odd"><td>amount</td>
+<td>Integer</td>
+<td>支付金额</td>
+</tr>
+<tr class="row-even"><td>payload</td>
+<td>String</td>
+<td>智能合约代码</td>
+</tr>
+</tbody>
+</table>
+<p>POST需要提交的参数格式如下：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;snUaJxp2k4WFt5LCCtEx2zjThQhpT&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">10</span>
+  <span class="s2">&quot;payload&quot;</span><span class="p">:</span> <span class="s2">&quot;function Init(...) a={} for k,v in ipairs({...}) do a[k]=v end b=a[1] return accountinfo(b) end;</span>
+<span class="s2">    function foo(...) a={} for k,v in ipairs({...}) do a[k]=v end b=a[1] return accountinfo(b) end&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/accounts/jsqRs9BDCjyTuRWEPZk3yHa4MFmRi9D834/contract/deploy
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ContractState&quot;</span><span class="p">:</span> <span class="s2">&quot;contract:j43X58GWHGqWqQXM6b2BNr43AG8TjsmfYb&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;engine_result&quot;</span><span class="p">:</span> <span class="s2">&quot;tesSUCCESS&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;engine_result_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;engine_result_message&quot;</span><span class="p">:</span> <span class="s2">&quot;The transaction was applied. Only final in a validated ledger.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;tx_blob&quot;</span><span class="p">:</span> <span class="s2">&quot;12001E2200000000240000001C2F215B24A120240000000061400000000098968068400000000000000A73210330E7FC9D56BB25D6893BA3F317AE5BCF33B3291BD63DB32654A313222F7FD02074473045022100A009376F5DCFA056F452C1B0703004A1D181D8479F908E353B2086867F4E89C20220100CCB09EDFEF416D1B611456BBEF4260E130E48E6AC719EE8A3A89FE65AFE127FC066756E6374696F6E20496E6974282E2E2E2920613D7B7D20666F72206B2C7620696E20697061697273287B2E2E2E7D2920646F20615B6B5D3D7620656E6420623D615B315D2072657475726E206163636F756E74696E666F28622920656E643B202066756E6374696F6E20666F6F282E2E2E2920613D7B7D20666F72206B2C7620696E20697061697273287B2E2E2E7D2920646F20615B6B5D3D7620656E6420623D615B315D2072657475726E206163636F756E74696E666F28622920656E648114B5F762798A53D543A014CAF8B297CFF8F2F937E8&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tx_json&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;Account&quot;</span><span class="p">:</span> <span class="s2">&quot;jsqRs9BDCjyTuRWEPZk3yHa4MFmRi9D834&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;Amount&quot;</span><span class="p">:</span> <span class="s2">&quot;10000000&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;Fee&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;Flags&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="nt">&quot;Method&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="nt">&quot;Payload&quot;</span><span class="p">:</span> <span class="s2">&quot;66756E6374696F6E20496E6974282E2E2E2920613D7B7D20666F72206B2C7620696E20697061697273287B2E2E2E7D2920646F20615B6B5D3D7620656E6420623D615B315D2072657475726E206163636F756E74696E666F28622920656E643B202066756E6374696F6E20666F6F282E2E2E2920613D7B7D20666F72206B2C7620696E20697061697273287B2E2E2E7D2920646F20615B6B5D3D7620656E6420623D615B315D2072657475726E206163636F756E74696E666F28622920656E64&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;Sequence&quot;</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span>
+   <span class="nt">&quot;SigningPubKey&quot;</span><span class="p">:</span> <span class="s2">&quot;0330E7FC9D56BB25D6893BA3F317AE5BCF33B3291BD63DB32654A313222F7FD020&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;Timestamp&quot;</span><span class="p">:</span> <span class="mi">559621281</span><span class="p">,</span>
+   <span class="nt">&quot;TransactionType&quot;</span><span class="p">:</span> <span class="s2">&quot;ConfigContract&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;TxnSignature&quot;</span><span class="p">:</span> <span class="s2">&quot;3045022100A009376F5DCFA056F452C1B0703004A1D181D8479F908E353B2086867F4E89C20220100CCB09EDFEF416D1B611456BBEF4260E130E48E6AC719EE8A3A89FE65AFE12&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;4E00320F4D0FB5567ADB938A6463D62BA93ACF94C049972E2C4DCB01C6B57540&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="20%" />
+<col width="15%" />
+<col width="13%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">success</td>
+<td>Boolean</td>
+<td colspan="2">请求结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">ContractState</td>
+<td>String</td>
+<td colspan="2">生成的合约地址</td>
+</tr>
+<tr class="row-even"><td colspan="3">engine_result</td>
+<td>Object</td>
+<td colspan="2">合约结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">engine_result_code</td>
+<td>String</td>
+<td colspan="2">合约结果码</td>
+</tr>
+<tr class="row-even"><td colspan="3">engine_result_message</td>
+<td>String</td>
+<td colspan="2">合约结果说明</td>
+</tr>
+<tr class="row-odd"><td colspan="3">tx_blob</td>
+<td>String</td>
+<td colspan="2">请求合约的blob</td>
+</tr>
+<tr class="row-even"><td colspan="3">tx_json</td>
+<td>Object</td>
+<td colspan="2">请求信息</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">Account</td>
+<td>String</td>
+<td colspan="2">请求的井通地址</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">Amount</td>
+<td>String</td>
+<td colspan="2">支付金额</td>
+</tr>
+<tr class="row-odd"><td colspan="3"><div class="first last line-block">
+<div class="line">Fee</div>
+</div>
+</td>
+<td>String</td>
+<td colspan="2">交易费用，井通计价</td>
+</tr>
+<tr class="row-even"><td colspan="3"><a href="api2_doc.html#id25"><span class="problematic" id="id26">|</span></a>Flags</td>
+<td>String</td>
+<td colspan="2">交易标识</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">Method</td>
+<td>String</td>
+<td colspan="2">交易方法：0表示部署，1表示调用</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">Payload</td>
+<td>String</td>
+<td colspan="2">16进制智能合约代码</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">Sequence</td>
+<td>String</td>
+<td colspan="2">单子号</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">SigningPubKey</td>
+<td>String</td>
+<td colspan="2">签名公钥</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">Timestamp</td>
+<td>Integer</td>
+<td colspan="2">交易时间，UNIXTIME</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">TransactionType</td>
+<td>String</td>
+<td colspan="2">交易类型</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">TxnSignature</td>
+<td>String</td>
+<td colspan="2">交易签名</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">hash</td>
+<td>String</td>
+<td colspan="2">交易hash</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id27">
+<h3>调用合约<a class="headerlink" href="api2_doc.html#id27" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/accounts/{:address}/contract/call，POST方法</p>
+<p>接口参数：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>address</td>
+<td>string</td>
+<td>井通钱包地址</td>
+</tr>
+</tbody>
+</table>
+<p>提交参数详情：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>secret</td>
+<td>String</td>
+<td>用户的钱包私钥</td>
+</tr>
+<tr class="row-odd"><td>destination</td>
+<td>String</td>
+<td>合约所在地址</td>
+</tr>
+<tr class="row-even"><td>params</td>
+<td>Array</td>
+<td>合约参数</td>
+</tr>
+</tbody>
+</table>
+<p>POST需要提交的参数格式如下：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;snUaJxp2k4WFt5LCCtEx2zjThQhpT&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;destination&quot;</span><span class="p">:</span> <span class="s2">&quot;jKotgzRHyoa7dywd7vf6LgFBXnv3K66zEg&quot;</span><span class="p">,</span>
+<span class="nt">&quot;params&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="s2">&quot;jsqRs9BDCjyTuRWEPZk3yHa4MFmRi9D834&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/accounts/jsqRs9BDCjyTuRWEPZk3yHa4MFmRi9D834/contract/call
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ContractState&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;Account&quot;</span><span class="p">:</span> <span class="s2">&quot;jsqRs9BDCjyTuRWEPZk3yHa4MFmRi9D834&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Balance&quot;</span><span class="p">:</span> <span class="s2">&quot;599999999829999910&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Flags&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;LedgerEntryType&quot;</span><span class="p">:</span> <span class="s2">&quot;AccountRoot&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;OwnerCount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;PreviousTxnID&quot;</span><span class="p">:</span> <span class="s2">&quot;4E00320F4D0FB5567ADB938A6463D62BA93ACF94C049972E2C4DCB01C6B57540&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PreviousTxnLgrSeq&quot;</span><span class="p">:</span> <span class="mi">153616</span><span class="p">,</span>
+        <span class="nt">&quot;Sequence&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="nt">&quot;index&quot;</span><span class="p">:</span> <span class="s2">&quot;2B6AC232AA4C4BE41BF49D2459FA4A0347E1B543A4C92FCEE0821C0201E2E9A8&quot;</span><span class="p">,</span>
+ <span class="p">},</span>
+  <span class="nt">&quot;engine_result&quot;</span><span class="p">:</span> <span class="s2">&quot;tesSUCCESS&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;engine_result_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;engine_result_message&quot;</span><span class="p">:</span> <span class="s2">&quot;The transaction was applied. Only final in a validated ledger.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;tx_blob&quot;</span><span class="p">:</span> <span class="s2">&quot;12001E2200000000240000001E2F215B2D3720240000000168400000000000000A73210330E7FC9D56BB25D6893BA3F317AE5BCF33B3291BD63DB32654A313222F7FD02074473045022100A2E6877B386732AB1857259705C383509812B60CAF8BF0615521BB06272625C6022052A3E44E6CAD493DED8A0ADF804BFE5B90BD68AD2B268CD42076FC410512FE8B701103666F6F8114B5F762798A53D543A014CAF8B297CFF8F2F937E88314CE508BEB2DC80614229CB1E64F51A65373225835FAEB7012226A486239434A41577942346A7239315652576E3936446B756B473462776474795468E1F1&quot;</span><span class="p">,</span>
+<span class="nt">&quot;tx_json&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;Account&quot;</span><span class="p">:</span> <span class="s2">&quot;jsqRs9BDCjyTuRWEPZk3yHa4MFmRi9D834&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Args&quot;</span><span class="p">:</span>  <span class="p">[</span>
+                <span class="p">{</span>
+                        <span class="nt">&quot;Arg&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;Parameter&quot;</span><span class="p">:</span> <span class="s2">&quot;6A486239434A41577942346A7239315652576E3936446B756B473462776474795468&quot;</span><span class="p">,</span>
+                        <span class="p">}</span>
+                <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;ContractMethod&quot;</span><span class="p">:</span> <span class="s2">&quot;666F6F&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Destination&quot;</span><span class="p">:</span> <span class="s2">&quot;jKotgzRHyoa7dywd7vf6LgFBXnv3K66zEg&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;Fee&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;Flags&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="nt">&quot;Method&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+   <span class="nt">&quot;Sequence&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+   <span class="nt">&quot;SigningPubKey&quot;</span><span class="p">:</span> <span class="s2">&quot;0330E7FC9D56BB25D6893BA3F317AE5BCF33B3291BD63DB32654A313222F7FD020&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;Timestamp&quot;</span><span class="p">:</span> <span class="mi">559623479</span><span class="p">,</span>
+   <span class="nt">&quot;TransactionType&quot;</span><span class="p">:</span> <span class="s2">&quot;ConfigContract&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;TxnSignature&quot;</span><span class="p">:</span> <span class="s2">&quot;3045022100A009376F5DCFA056F452C1B0703004A1D181D8479F908E353B2086867F4E89C20220100CCB09EDFEF416D1B611456BBEF4260E130E48E6AC719EE8A3A89FE65AFE12&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;4E00320F4D0FB5567ADB938A6463D62BA93ACF94C049972E2C4DCB01C6B57540&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="20%" />
+<col width="15%" />
+<col width="13%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">success</td>
+<td>Boolean</td>
+<td colspan="2">请求结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">ContractState</td>
+<td>Object</td>
+<td colspan="2">调用方信息</td>
+</tr>
+<tr class="row-even"><td colspan="3">engine_result</td>
+<td>String</td>
+<td colspan="2">合约结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">engine_result_code</td>
+<td>String</td>
+<td colspan="2">合约结果码</td>
+</tr>
+<tr class="row-even"><td colspan="3">engine_result_message</td>
+<td>String</td>
+<td colspan="2">合约结果说明</td>
+</tr>
+<tr class="row-odd"><td colspan="3">tx_blob</td>
+<td>String</td>
+<td colspan="2">请求合约的blob</td>
+</tr>
+<tr class="row-even"><td colspan="3">tx_json</td>
+<td>Object</td>
+<td colspan="2">请求信息</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">Account</td>
+<td>String</td>
+<td colspan="2">请求的井通地址</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">Args</td>
+<td>Array</td>
+<td colspan="2">合约传入的参数</td>
+</tr>
+<tr class="row-odd"><td colspan="3"><div class="first last line-block">
+<div class="line">ContractMethod</div>
+</div>
+</td>
+<td>String</td>
+<td colspan="2">合约方法</td>
+</tr>
+<tr class="row-even"><td colspan="3"><a href="api2_doc.html#id28"><span class="problematic" id="id29">|</span></a>Destination</td>
+<td>String</td>
+<td colspan="2">调用的合约地址</td>
+</tr>
+<tr class="row-odd"><td colspan="3"><div class="first last line-block">
+<div class="line">Fee</div>
+</div>
+</td>
+<td>String</td>
+<td colspan="2">交易费用，井通计价</td>
+</tr>
+<tr class="row-even"><td colspan="3"><a href="api2_doc.html#id30"><span class="problematic" id="id31">|</span></a>Flags</td>
+<td>String</td>
+<td colspan="2">交易标识</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">Method</td>
+<td>String</td>
+<td colspan="2">交易方法：0表示部署，1表示调用</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">Sequence</td>
+<td>String</td>
+<td colspan="2">单子号</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">SigningPubKey</td>
+<td>String</td>
+<td colspan="2">签名公钥</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">Timestamp</td>
+<td>Integer</td>
+<td colspan="2">交易时间，UNIXTIME</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">TransactionType</td>
+<td>String</td>
+<td colspan="2">交易类型</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">TxnSignature</td>
+<td>String</td>
+<td colspan="2">交易签名</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">hash</td>
+<td>String</td>
+<td colspan="2">交易hash</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id32">
+<h2>本地签名<a class="headerlink" href="api2_doc.html#id32" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id33">
+<h3>提交本地签名<a class="headerlink" href="api2_doc.html#id33" title="永久链接至标题">¶</a></h3>
+<p>接口：/v2/sign，POST方法</p>
+<p>提交参数详情：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>blob</td>
+<td>String</td>
+<td>签名后的交易信息</td>
+</tr>
+</tbody>
+</table>
+<p>POST需要提交的参数格式如下：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;blob&quot;</span><span class="p">:</span> <span class="s2">&quot;1200002200000000240000028461400000000007A12068400000000000000A73210224445F6980BBC7F34F5042893C419E536468F92A9034177C0CB786CC7836025B74473045022100FC7EA9B7200CA4D3F2C4948E86140F14D5C1FA1CE68682288B51928A7C7256ED02204D3993571B4EEA50A64A3CDB2A38D61EA28F46C3563CF64B48A211E44456738D81147A44B90BCADB1F585D590DC31AB83245E049BB668314B9DFBBDC029B81C608497CE3D61C70D79BCCA955&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>例子：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>http://localhost/v2/sign
+</pre></div>
+</div>
+<p>结果：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;engine_result&quot;</span><span class="p">:</span> <span class="s2">&quot;tesSUCCESS&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;engine_result_code&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;eengine_result_message&quot;</span><span class="p">:</span> <span class="s2">&quot;The transaction was applied. Only final in a validated ledger.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;tx_blob&quot;</span><span class="p">:</span> <span class="s2">&quot;1200002200000000240000028461400000000007A12068400000000000000A73210224445F6980BBC7F34F5042893C419E536468F92A9034177C0CB786CC7836025B74473045022100FC7EA9B7200CA4D3F2C4948E86140F14D5C1FA1CE68682288B51928A7C7256ED02204D3993571B4EEA50A64A3CDB2A38D61EA28F46C3563CF64B48A211E44456738D81147A44B90BCADB1F585D590DC31AB83245E049BB668314B9DFBBDC029B81C608497CE3D61C70D79BCCA955&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;tx_json&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;Account&quot;</span><span class="p">:</span> <span class="s2">&quot;jU9VmMHKk1jakMKpjGhWYibnmz5sDw3ZNt&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Amount&quot;</span><span class="p">:</span> <span class="s2">&quot;500000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Destination&quot;</span><span class="p">:</span> <span class="s2">&quot;jHAFp8CrBM48QJyqB8V7NWH9XBsHRQcUu8&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Fee&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Flags&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;Sequence&quot;</span><span class="p">:</span> <span class="mi">644</span><span class="p">,</span>
+        <span class="nt">&quot;SigningPubKey&quot;</span><span class="p">:</span> <span class="s2">&quot;02FE64E0C20F0058F22F3742EDC15F49F318C04F88B130742C68BAF3B1C89FD167&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;TransactionType&quot;</span><span class="p">:</span> <span class="s2">&quot;Payment&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;TxnSignature&quot;</span><span class="p">:</span> <span class="s2">&quot;3045022100948A033830881A3BCF90EBCF79CAD2000149CA347BF3C19997083DD247FBB45D02203977E0AB7B59F3982719F2A38C6363649620CF4F441C8FA7E4FC3CDFAEFA879C&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;E663D510536DCE4DEE48B1C6F958B102386E462F80CAA77720921341AFD0A3DC&quot;</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回的结果信息：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="20%" />
+<col width="15%" />
+<col width="13%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">参数</th>
+<th class="head">类型</th>
+<th class="head" colspan="2">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="3">success</td>
+<td>Boolean</td>
+<td colspan="2">请求结果</td>
+</tr>
+<tr class="row-odd"><td colspan="3">engine_result</td>
+<td>Object</td>
+<td colspan="2">交易结果</td>
+</tr>
+<tr class="row-even"><td colspan="3">engine_result_code</td>
+<td>String</td>
+<td colspan="2">交易结果码</td>
+</tr>
+<tr class="row-odd"><td colspan="3">engine_result_message</td>
+<td>String</td>
+<td colspan="2">交易结果说明</td>
+</tr>
+<tr class="row-even"><td colspan="3">tx_blob</td>
+<td>String</td>
+<td colspan="2">请求交易的blob</td>
+</tr>
+<tr class="row-odd"><td colspan="3">tx_json</td>
+<td>Object</td>
+<td colspan="2">请求信息</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">Account</td>
+<td>String</td>
+<td colspan="2">请求的井通地址</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">Amount</td>
+<td>String</td>
+<td colspan="2">支付金额*1000000</td>
+</tr>
+<tr class="row-even"><td colspan="3"><div class="first last line-block">
+<div class="line">Fee</div>
+</div>
+</td>
+<td>String</td>
+<td colspan="2">交易费用，井通计价*1000000</td>
+</tr>
+<tr class="row-odd"><td colspan="3"><a href="api2_doc.html#id34"><span class="problematic" id="id35">|</span></a>Flags</td>
+<td>String</td>
+<td colspan="2">交易标识</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">Sequence</td>
+<td>String</td>
+<td colspan="2">单子号</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">SigningPubKey</td>
+<td>String</td>
+<td colspan="2">签名公钥</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">TransactionType</td>
+<td>String</td>
+<td colspan="2">交易类型</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td colspan="2">TxnSignature</td>
+<td>String</td>
+<td colspan="2">交易签名</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td colspan="2">hash</td>
+<td>String</td>
+<td colspan="2">交易hash</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id36">
+<h2>订阅功能<a class="headerlink" href="api2_doc.html#id36" title="永久链接至标题">¶</a></h2>
+<p>为了减少前端软件的复杂度，井通标准接口（REST API）提供井通地址的websocket长连接服务。前端软件可以通过websocket连接向标准接口订阅和井通地址相关的交易信息。任何和该地址相关的交易信息将会通过相应的websocket连接传出。
+REST API订阅后台是API一个服务地址，测试环境的接口是wss://tapi.jingtum.com:5443</p>
+<div class="section" id="id37">
+<h3>连接服务<a class="headerlink" href="api2_doc.html#id37" title="永久链接至标题">¶</a></h3>
+<p>连接Websocket服务之后，后台返回订阅ID，如下:</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;connection&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;03afb5a3-0bdb-4a6b-bc6a-4ff72cce05bc&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id38">
+<h3>发起订阅<a class="headerlink" href="api2_doc.html#id38" title="永久链接至标题">¶</a></h3>
+<p>客户端在连接上服务之后，通过发送订阅请求进行订阅，订阅请求如下：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;subscribe&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;account&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;jDUjqoDZLhzx4DCf6pvSivjkjgtRESY62c&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>订阅请求中，必须将订阅用户的地址和类型一起提交上来，参数type表示所订阅的类型，包含3种：account(订阅某个账号的交易记录)、transactions(订阅所有交易记录)、ledger(订阅账本消息)。
+订阅成功之后，返回：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;jDUjqoDZLhzx4DCf6pvSivjkjgtRESY62c&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;subscribe&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;account&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>当请求的JSON格式不对时，失败返回</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;xxx&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>当请求的参数有问题时，返回：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;jDUjqoDZLhzx4DCf6pvSivjkjgtRESY62c&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;all&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;subscribe&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;account&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;XXX&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>error包括缺少account，type，account格式不对，type格式不对等，分别是：
+1.missing account
+2.account is not valid jingtum address
+3.invalid type</p>
+</div>
+<div class="section" id="id39">
+<h3>取消订阅<a class="headerlink" href="api2_doc.html#id39" title="永久链接至标题">¶</a></h3>
+<p>客户端在连接上服务之后，通过发送取消订阅请求进行取消订阅，取消订阅请求如下：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;unsubscribe&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;jDUjqoDZLhzx4DCf6pvSivjkjgtRESY62c&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;account&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>取消订阅成功时候，返回：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;unsubscribe&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;jDUjqoDZLhzx4DCf6pvSivjkjgtRESY62c&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;account&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>当请求的JSON格式有问题时，返回：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;xxx&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>当请求的参数不正确时，返回：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;jDUjqoDZLhzx4DCf6pvSivjkjgtRESYdfad62c&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;unsubscribe&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;account&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;XXX&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>取消订阅，参数不正确主要是account缺失或者格式不正确：
+a)account is missing
+b)Invalid type
+c)等</p>
+</div>
+<div class="section" id="id40">
+<h3>接收消息<a class="headerlink" href="api2_doc.html#id40" title="永久链接至标题">¶</a></h3>
+<p>用户在做完异步操作之后，且订阅了用户的交易消息，用户可以收到如下的交易信息：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;jsGn5UAxwTuYfN5aa6TBC2KZyDDoFJfM8b&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Payment&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;transaction&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="mi">1449484040</span><span class="p">,</span>
+    <span class="nt">&quot;hash&quot;</span><span class="p">:</span> <span class="s2">&quot;599424E57016194C987F3F8A5F9723251C1458E7F33C4D88BC7624088238313F&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;sent&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;fee&quot;</span><span class="p">:</span> <span class="s2">&quot;0.000012&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="s2">&quot;tesSUCCESS&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;counterparty&quot;</span><span class="p">:</span> <span class="s2">&quot;jfEPgtxzezSPievdVNpdyEJndkQki2xEZ6&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;CNY&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;issuer&quot;</span><span class="p">:</span> <span class="s2">&quot;j3nH2JYBPupQwHLz5UDSD2i7i4nnSsVWb5&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;effects&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>基本格式为account: 帐号，type: 交易类型，transaction: 交易信息，交易类型和交易信息里面的内容和API里面的信息一致。
+在用户被动成交时，用户也会收到交易相关的信息。
+当交易失败时，会有如下的格式的消息：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;jsGn5UAxwTuYfN5aa6TBC2KZyDDoFJfM8b&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Payment&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;transaction&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="s2">&quot;tecNO_DST_INSUF_SWT&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;xxx&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>通过success可以判断返回的交易结果是成功的还是失败的，其他的失败记录均即时反馈回给用户，无需在订阅中获得。</p>
+</div>
+<div class="section" id="id41">
+<h3>关闭订阅<a class="headerlink" href="api2_doc.html#id41" title="永久链接至标题">¶</a></h3>
+<p>通过发送如下命令，关闭订阅</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;close&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>关闭订阅之后，后台返回订阅关闭结果</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;close&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id42">
+<h2>错误信息<a class="headerlink" href="api2_doc.html#id42" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id43">
+<h3>客户端错误<a class="headerlink" href="api2_doc.html#id43" title="永久链接至标题">¶</a></h3>
+<p>ClientError，此错误主要是客户端请求参数错误，包括井通地址格式不对，私钥格式不对，货币格式不对等以及根据每个接口提交的参数格式不对等导致的错误；</p>
+</div>
+<div class="section" id="id44">
+<h3>网络错误<a class="headerlink" href="api2_doc.html#id44" title="永久链接至标题">¶</a></h3>
+<p>NetworkError，此错误主要是网络错误，包括链接井通网络没有连上，请求服务超时等；</p>
+</div>
+<div class="section" id="id45">
+<h3>交易错误<a class="headerlink" href="api2_doc.html#id45" title="永久链接至标题">¶</a></h3>
+<p>TransactionError，此错误主要是重复资源号的错误，即DuplicateTransactionError；</p>
+</div>
+<div class="section" id="id46">
+<h3>服务端错误<a class="headerlink" href="api2_doc.html#id46" title="永久链接至标题">¶</a></h3>
+<p>ServerError，此错误主要是后台程序错误，包括代码BUG、代码实现问题等；</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>0</td>
+<td>success</td>
+</tr>
+<tr class="row-even"><td>1000</td>
+<td>client error</td>
+</tr>
+<tr class="row-odd"><td>1001</td>
+<td>Invalid parameter: address</td>
+</tr>
+<tr class="row-even"><td>1002</td>
+<td>Invalid parameter: secret</td>
+</tr>
+<tr class="row-odd"><td>1003</td>
+<td>Invalid parameter: currency</td>
+</tr>
+<tr class="row-even"><td>1004</td>
+<td>Invalid parameter: issuer</td>
+</tr>
+<tr class="row-odd"><td>1005</td>
+<td>Invalid parameter: order</td>
+</tr>
+<tr class="row-even"><td>1006</td>
+<td>Invalid parameter: order.type</td>
+</tr>
+<tr class="row-odd"><td>1007</td>
+<td>Invalid parameter: order.price</td>
+</tr>
+<tr class="row-even"><td>1008</td>
+<td>Invalid parameter: order.sequence</td>
+</tr>
+<tr class="row-odd"><td>1009</td>
+<td>Invalid parameter: hash</td>
+</tr>
+<tr class="row-even"><td>1010</td>
+<td>not an order transaction</td>
+</tr>
+<tr class="row-odd"><td>1011</td>
+<td>Transaction specified did not affect the given account</td>
+</tr>
+<tr class="row-even"><td>1012</td>
+<td>Invalid parameter: base</td>
+</tr>
+<tr class="row-odd"><td>1013</td>
+<td>Invalid parameter: counter</td>
+</tr>
+<tr class="row-even"><td>1014</td>
+<td>Invalid parameter: destination_address</td>
+</tr>
+<tr class="row-odd"><td>1015</td>
+<td>Invalid parameter: amount</td>
+</tr>
+<tr class="row-even"><td>1016</td>
+<td>Invalid parameter: payment</td>
+</tr>
+<tr class="row-odd"><td>1017</td>
+<td>Invalid parameter: payment.source</td>
+</tr>
+<tr class="row-even"><td>1018</td>
+<td>Invalid parameter: payment.destination</td>
+</tr>
+<tr class="row-odd"><td>1019</td>
+<td>Invalid parameter: payment.amount</td>
+</tr>
+<tr class="row-even"><td>1020</td>
+<td>Invalid parameter: memos,it must be an array</td>
+</tr>
+<tr class="row-odd"><td>1021</td>
+<td>Invalid parameter: choice,it must be a string</td>
+</tr>
+<tr class="row-even"><td>1022</td>
+<td>Invalid parameter: client_id,must be a number</td>
+</tr>
+<tr class="row-odd"><td>1023</td>
+<td>Invalid parameter: client_id, already exits</td>
+</tr>
+<tr class="row-even"><td>1024</td>
+<td>Invalid parameter: choice, not exist</td>
+</tr>
+<tr class="row-odd"><td>1025</td>
+<td>Not a payment transaction</td>
+</tr>
+<tr class="row-even"><td>1026</td>
+<td>Invalid parameter:results_per_page</td>
+</tr>
+<tr class="row-odd"><td>1027</td>
+<td>Invalid parameter:page</td>
+</tr>
+<tr class="row-even"><td>1028</td>
+<td>Invalid parameter:results_per_page, it mast be a number and not less than 10</td>
+</tr>
+<tr class="row-odd"><td>1029</td>
+<td>Invalid parameter: order.pair</td>
+</tr>
+<tr class="row-even"><td>1030</td>
+<td>Invalid parameter: order.amount</td>
+</tr>
+<tr class="row-odd"><td>1031</td>
+<td>Missing parameters</td>
+</tr>
+<tr class="row-even"><td>1032</td>
+<td>Invalid parameter: method, it must be 0 or 1</td>
+</tr>
+<tr class="row-odd"><td>1033</td>
+<td>Invalid parameter: payload, it must be string</td>
+</tr>
+<tr class="row-even"><td>1034</td>
+<td>Invalid parameter: amount,it must be a number greater than zero</td>
+</tr>
+<tr class="row-odd"><td>1035</td>
+<td>Invalid parameter: params,it must be an array</td>
+</tr>
+<tr class="row-even"><td>2000</td>
+<td>Server error</td>
+</tr>
+<tr class="row-odd"><td>3000</td>
+<td>Transaction error</td>
+</tr>
+<tr class="row-even"><td>3001</td>
+<td>Could not generate wallet</td>
+</tr>
+<tr class="row-odd"><td>4000</td>
+<td>Network error</td>
+</tr>
+<tr class="row-even"><td>4001</td>
+<td>Remote is disconnected</td>
+</tr>
+<tr class="row-odd"><td>4002</td>
+<td>Time out</td>
+</tr>
+<tr class="row-even"><td>4003</td>
+<td>Bad gateway</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sdk_java.html" class="btn btn-neutral float-right" title="Java SDK" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chapter6_transaction.html" class="btn btn-neutral" title="记录类信息" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Jintum Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python SDK &mdash; Jingtum 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="Jingtum 1.0.0 文档" href="index.html"/>
+        <link rel="next" title="PHP SDK" href="sdk_php.html"/>
+        <link rel="prev" title="Java SDK" href="sdk_java.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jingtum
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">文档内容</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_start.html">接入流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_concepts.html">基本概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_modes.html">交易模式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2_account.html">账号类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3_fingate.html">银关类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4_payment.html">支付类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter7_relation.html">关系类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter5_offer.html">挂单类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6_transaction.html">记录类信息</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api2_doc.html">API说明</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sdk_java.html">Java SDK</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="sdk_python.html#">Python SDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdk_python.html#id1">环境准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_python.html#id2">下载安装</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_php.html">PHP SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_nodejs.html">Node.JS SDK</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Jingtum</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Python SDK</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-sdk">
+<h1>Python SDK<a class="headerlink" href="sdk_python.html#python-sdk" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>环境准备<a class="headerlink" href="sdk_python.html#id1" title="永久链接至标题">¶</a></h2>
+<p>Python SDK建议在Ubuntu环境下使用，需要如下软件包：</p>
+<p>1.python2.7</p>
+<p>2.ecdsa</p>
+<p>3.six</p>
+<p>4.websocket-client</p>
+<p>可通过pip install的方式直接安装如上软件包</p>
+</div>
+<div class="section" id="id2">
+<h2>下载安装<a class="headerlink" href="sdk_python.html#id2" title="永久链接至标题">¶</a></h2>
+<p>1、通过以下链接地址下载最新版本SDK：
+请点击链接下载sdk包
+github下载地址：<a class="reference external" href="https://github.com/jingtum/jingtum-python-sdk.git">https://github.com/jingtum/jingtum-python-sdk.git</a></p>
+<p>2、安装方法：
+依赖包安装完毕后，井通SDK可通过 pip 直接安装，命令如下：</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>pip install jingtum-sdk
+</pre></div>
+</div>
+<p>程序示例</p>
+<p>可参见https://github.com/jingtum/jingtum-python-sdk/examples下的test.py示例。</p>
+<p>产生新的井通帐号</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># init FinGate</span>
+<span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="p">()</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setMode</span><span class="p">(</span><span class="n">FinGate</span><span class="o">.</span><span class="n">DEVLOPMENT</span><span class="p">)</span>
+
+
+<span class="c1"># create my wallet</span>
+<span class="n">my_wallet</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">my_wallet</span> <span class="o">=</span> <span class="n">fingate</span><span class="o">.</span><span class="n">createWallet</span><span class="p">()</span>
+
+<span class="c1"># Active the new wallet</span>
+<span class="c1"># Need to setup an account with enough SWT in it.</span>
+
+<span class="n">fingate</span><span class="o">.</span><span class="n">setAccount</span><span class="p">(</span><span class="s2">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="p">)</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setActivateAmount</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">activateWallet</span><span class="p">(</span><span class="n">my_wallet</span><span class="o">.</span><span class="n">address</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>查询帐号的余额信息</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># init FinGate</span>
+<span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="p">()</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setMode</span><span class="p">(</span><span class="n">FinGate</span><span class="o">.</span><span class="n">DEVLOPMENT</span><span class="p">)</span>
+
+<span class="n">my_wallet</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">(</span><span class="s2">&quot;shVC2gdG......gijqk4EsuqDF&quot;</span><span class="p">)</span>
+<span class="n">ret</span> <span class="o">=</span> <span class="n">my_wallet</span><span class="o">.</span><span class="n">getBalance</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>使用帐号进行支付</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># init FinGate</span>
+<span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="p">()</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setMode</span><span class="p">(</span><span class="n">FinGate</span><span class="o">.</span><span class="n">DEVLOPMENT</span><span class="p">)</span>
+
+<span class="n">my_wallet</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">(</span><span class="s2">&quot;shVC2gdG......gijqk4EsuqDF&quot;</span><span class="p">)</span>
+<span class="n">op</span> <span class="o">=</span> <span class="n">PaymentOperation</span><span class="p">(</span><span class="n">my_wallet</span><span class="p">)</span>
+
+<span class="n">op</span><span class="o">.</span><span class="n">setDestAddress</span><span class="p">(</span><span class="s1">&#39;jpyyHbEWiuCA......DRrYJQzcXb&#39;</span><span class="p">)</span>
+
+<span class="n">amt</span> <span class="o">=</span> <span class="n">Amount</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;CNY&quot;</span><span class="p">,</span> <span class="n">test_issuer</span><span class="p">)</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setAmount</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
+
+<span class="n">op</span><span class="o">.</span><span class="n">setClientId</span><span class="p">(</span><span class="s2">&quot;20611171957&quot;</span><span class="p">)</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setValidate</span><span class="p">(</span><span class="n">true</span><span class="p">)</span>
+
+<span class="n">op</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">callback</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>生成挂单</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># init FinGate</span>
+<span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="p">()</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setMode</span><span class="p">(</span><span class="n">FinGate</span><span class="o">.</span><span class="n">DEVLOPMENT</span><span class="p">);</span>
+
+<span class="n">my_wallet</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">(</span><span class="s2">&quot;shVC2gdG......gijqk4EsuqDF&quot;</span><span class="p">)</span>
+<span class="n">co</span> <span class="o">=</span> <span class="n">OrderOperation</span><span class="p">(</span><span class="n">my_wallet</span><span class="p">)</span>
+<span class="n">co</span><span class="o">.</span><span class="n">setPair</span><span class="p">(</span><span class="s2">&quot;SWT/CNY:janxMdr...GewMMeHa9f&quot;</span><span class="p">);</span>
+<span class="n">co</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="n">OrderOperation</span><span class="o">.</span><span class="n">SELL</span><span class="p">);</span>
+<span class="n">co</span><span class="o">.</span><span class="n">setAmount</span><span class="p">(</span><span class="mf">20.00</span><span class="p">);</span>
+<span class="n">co</span><span class="o">.</span><span class="n">setPrice</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>
+<span class="n">co</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">callback</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>取消挂单</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># init FinGate</span>
+<span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="p">()</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setMode</span><span class="p">(</span><span class="n">FinGate</span><span class="o">.</span><span class="n">DEVLOPMENT</span><span class="p">)</span>
+
+<span class="n">my_wallet</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">(</span><span class="s2">&quot;shVC2gdG......gijqk4EsuqDF&quot;</span><span class="p">)</span>
+<span class="n">co</span> <span class="o">=</span> <span class="n">CancelOrderOperation</span><span class="p">(</span><span class="n">my_wallet</span><span class="p">)</span>
+<span class="n">co</span><span class="o">.</span><span class="n">setOrderNum</span><span class="p">(</span><span class="mi">54</span><span class="p">)</span>
+<span class="n">co</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">callback</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sdk_php.html" class="btn btn-neutral float-right" title="PHP SDK" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sdk_java.html" class="btn btn-neutral" title="Java SDK" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Jintum Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

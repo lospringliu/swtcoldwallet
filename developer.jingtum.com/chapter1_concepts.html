@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>基本概念 &mdash; Jingtum 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="Jingtum 1.0.0 文档" href="index.html"/>
+        <link rel="next" title="交易模式" href="chapter1_modes.html"/>
+        <link rel="prev" title="接入流程" href="chapter1_start.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jingtum
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">文档内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chapter1_start.html">接入流程</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="chapter1_concepts.html#">基本概念</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_concepts.html#swt-system-working-token">SWT，System Working Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_concepts.html#tum">Tum，用户通</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_concepts.html#fingate">FinGate，银关</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_concepts.html#smart-contract">Smart Contract，智能合约</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_modes.html">交易模式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2_account.html">账号类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3_fingate.html">银关类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4_payment.html">支付类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter7_relation.html">关系类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter5_offer.html">挂单类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6_transaction.html">记录类信息</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api2_doc.html">API说明</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk_java.html">Java SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_python.html">Python SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_php.html">PHP SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_nodejs.html">Node.JS SDK</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Jingtum</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>基本概念</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>基本概念<a class="headerlink" href="chapter1_concepts.html#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="swt-system-working-token">
+<h2>SWT，System Working Token<a class="headerlink" href="chapter1_concepts.html#swt-system-working-token" title="永久链接至标题">¶</a></h2>
+<p>SWT，是井通区块链原生的数字资产，作用类似于比特币系统中的Bitcoin或以太坊中的ETH，是井通系统内交易所需的介质。</p>
+<p>SWT本身的作用有两方面，一方面提供用户在井通系统中建立有效账户的凭据；另一方面是用户在井通系统中交易的费用消耗。
+同时，SWT保障系统运行的稳定和安全，提高恶意攻击的成本。交易中消耗的SWT费用，由系统本身回收进行循环利用。</p>
+</div>
+<div class="section" id="tum">
+<h2>Tum，用户通<a class="headerlink" href="chapter1_concepts.html#tum" title="永久链接至标题">¶</a></h2>
+<p>Tum，用户通是企业在井通区块链上发行和使用的智能电子资产的统称。用户通的发行，使用和回收都会记录在区块链中。
+这些记录都会签名后加盖时间戳，并存储在多个服务器上以便查询。
+用户通的发行须由企业向井通银关申请。申请内容需要包括公司的基本信息和发行信息，具体请参考用户指南。
+企业发行的用户通由企业的信用提供保证，可以用来为用户提供多种服务，比如作为企业服务的优惠券，代金券等。</p>
+</div>
+<div class="section" id="fingate">
+<h2>FinGate，银关<a class="headerlink" href="chapter1_concepts.html#fingate" title="永久链接至标题">¶</a></h2>
+<p>FinGate, 银关是井通对企业和商户等B端的建模，是区块链中服务的接入点， 也是各个企业和商户的管理端。</p>
+<p>银关的主要功能如下：</p>
+<ol class="arabic simple">
+<li>管理企业和商户的用户</li>
+</ol>
+<p>企业和商户通过银关解决其相应用户接入区块链的问题，为他们的用户提供可信的接入服务，同时解决用户实名认证问题，
+满足政府部门监管需求，为用户提供区块链服务。</p>
+<ol class="arabic simple" start="2">
+<li>管理企业和商户的资源</li>
+</ol>
+<p>企业和商户可以通过银关发行属于自己的用户通资源，例如发行企业内部积分、发行商户优惠券、发行商户积分等，
+为企业的业务流程构建提供支持，同时可以通过银关为企业部署合约等提供区块链入口，为企业智能合约的执行提供一个便捷的操作平台。
+井通银关有不同的工作模式。</p>
+<p>目前DEVELOPMENT模式为测试模式，PRODUCTION模式为正式模式。</p>
+</div>
+<div class="section" id="smart-contract">
+<h2>Smart Contract，智能合约<a class="headerlink" href="chapter1_concepts.html#smart-contract" title="永久链接至标题">¶</a></h2>
+<p>Smart Contract，智能合约是执行在区块链上面的合约程序，通过区块链提供不可停止的可信计算功能，保障了合约的自由执行，
+所以在井通系统中智能合约也称为自由合约。智能合约是解决多方在业务功能执行上面信任的问题，保障多方共同信任某一合约功能的执行，
+解决现实世界中执行的可信问题。</p>
+<p>智能合约的执行是不可停止的，所以智能合约需要通过在合约中构建可以满足现实需求的合约功能，包括监督、行政以及监管的功能，
+通过合约本身的机制来符合业务的需求。</p>
+<p>井通智能合约提供基本的、可靠的合约模板满足基本的大部分的合约需求，同时也提供自由编程的模式，为合约高级用户提供丰富的功能，
+基本的功能包括合约部署，合约驱动以及合约停止等功能。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chapter1_modes.html" class="btn btn-neutral float-right" title="交易模式" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chapter1_start.html" class="btn btn-neutral" title="接入流程" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Jintum Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

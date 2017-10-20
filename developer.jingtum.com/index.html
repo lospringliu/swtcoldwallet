@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>欢迎使用井通区块链! &mdash; Jingtum 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="Jingtum 1.0.0 文档" href="index.html#"/>
+        <link rel="next" title="接入流程" href="chapter1_start.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html#" class="icon icon-home"> Jingtum
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">文档内容</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_start.html">接入流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_concepts.html">基本概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_modes.html">交易模式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2_account.html">账号类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3_fingate.html">银关类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4_payment.html">支付类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter7_relation.html">关系类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter5_offer.html">挂单类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6_transaction.html">记录类信息</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api2_doc.html">API说明 V2.0.3</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk_java.html">Java SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_python.html">Python SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_php.html">PHP SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_nodejs.html">Node.JS SDK</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html#">Jingtum</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html#">Docs</a> &raquo;</li>
+      
+    <li>欢迎使用井通区块链!</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>欢迎使用井通区块链!<a class="headerlink" href="index.html#id1" title="永久链接至标题">¶</a></h1>
+<p>井通系统是基于区块链技术构建的一个去中心化互享生态的互联网交易网络。
+井通系统在底层通过密码学、点对点网络技术和分布式一致性机制解决数据的信任问题，并在其上提供丰富的交易功能以及合约功能。
+此文档即为企业和商户提供如何接入井通系统的指南。</p>
+<p>井通系统提供去中心化的平台给各个企业和商户，每个接入井通系统的企业和商户都可以在井通系统中享有以自己为中心的商业平台，
+管理自己的资金和用户。 同时，该企业或商户的终端消费者能够通过井通系统在市场上和平台上所有的用户自由交易自己拥有的各类资产，
+包括商户的积分，电子凭证化的卡券，金融方面的债权，股票或者其它各种商品等。</p>
+<p>井通为开发者提供了一个测试网络，开发者可以在注册后得到一个免费的初始测试账号，具体信息请联系service&#64;jingtum.com。
+井通测试网络仅为测试目的，会不定期更新和重启，开发者请勿将其用于真实的商业运作，井通公司不承担由此带来的任何损失。
+如果开发者希望开发商业项目，请与井通公司联系获取正式井通网络的账号。</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">文档内容</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_start.html">接入流程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_start.html#id2">第一步，注册企业银关</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_start.html#id3">第二步，企业银关认证</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_start.html#id4">第三步，企业银关申请资源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_start.html#id5">第四步，企业银关发行资源</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_concepts.html">基本概念</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_concepts.html#swt-system-working-token">SWT，System Working Token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_concepts.html#tum">Tum，用户通</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_concepts.html#fingate">FinGate，银关</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_concepts.html#smart-contract">Smart Contract，智能合约</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_modes.html">交易模式</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_modes.html#id2">同步模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_modes.html#id3">异步模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_modes.html#id4">订阅模式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2_account.html">账号类交易</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter2_account.html#id2">创建账号</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2_account.html#id3">账号余额</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3_fingate.html">银关类交易</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter3_fingate.html#id2">发行用户通</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3_fingate.html#id3">查询发行状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3_fingate.html#id8">查询用户通状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3_fingate.html#id13">查询市场深度</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4_payment.html">支付类交易</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter4_payment.html#id2">提交支付</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter4_payment.html#id3">查询支付选择</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter4_payment.html#id8">按支付选择支付</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter4_payment.html#id13">查询支付历史</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter7_relation.html">关系类交易</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter7_relation.html#id2">设置关系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter7_relation.html#id3">取消关系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter7_relation.html#id8">查询关系</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter5_offer.html">挂单类交易</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter5_offer.html#id2">提交挂单</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter5_offer.html#id3">取消挂单</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter5_offer.html#id8">查询挂单信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter5_offer.html#id13">查询市场深度</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6_transaction.html">记录类信息</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter6_transaction.html#id2">查询交易信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter6_transaction.html#id3">查询交易历史</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="api">
+<h1>API文档<a class="headerlink" href="index.html#api" title="永久链接至标题">¶</a></h1>
+<p>目前，井通系统支持帐号相关、交易相关、关系相关、合约相关以及记录信息查询等操作，可以满足大部分业务系统的操作要求。
+在井通系统中，这些操作都是标准的HTTP和Websocket接口，可以连接各种不同的用户业务系统，接口都通过SSL加密，保证接口的安全性。
+这些接口可以直接通过API和SDK调用。</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api2_doc.html">API说明 V2.0.3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id1">账号类接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id4">支付接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id9">挂单类接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id17">交易记录接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id23">智能合约</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id32">本地签名</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id36">订阅功能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api2_doc.html#id42">错误信息</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="sdk">
+<h1>SDK文档<a class="headerlink" href="index.html#sdk" title="永久链接至标题">¶</a></h1>
+<p>为了方便井通客户端软件的开发，井通提供了多版语言的软件开发包（Software Development Kit - SDK）满足开发者的需求。
+SDK是简单的和推荐的接入井通平台的方式。</p>
+<p>SDK封装了账号、交易、关系、事务以及合约等接口与API列表中调用方法。
+开发者不需了解协议，将相关的参数修改成自身对应的参数即可使用，以便于专注于业务流程构建。
+同时，也提供了供第三方高级需求进行自行配置的可选参数与相关函数，使开发者可以根据自身需求灵活使用。</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk_java.html">Java SDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdk_java.html#id1">环境准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_java.html#id2">下载安装</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_python.html">Python SDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdk_python.html#id1">环境准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_python.html#id2">下载安装</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_php.html">PHP SDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdk_php.html#id1">环境准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_php.html#id2">下载安装</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_nodejs.html">Node.JS SDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdk_nodejs.html#id1">环境准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_nodejs.html#id2">下载安装</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chapter1_start.html" class="btn btn-neutral float-right" title="接入流程" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Jintum Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

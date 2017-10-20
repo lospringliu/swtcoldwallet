@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>交易模式 &mdash; Jingtum 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="Jingtum 1.0.0 文档" href="index.html"/>
+        <link rel="next" title="账号类交易" href="chapter2_account.html"/>
+        <link rel="prev" title="基本概念" href="chapter1_concepts.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jingtum
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">文档内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chapter1_start.html">接入流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_concepts.html">基本概念</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="chapter1_modes.html#">交易模式</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_modes.html#id2">同步模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_modes.html#id3">异步模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1_modes.html#id4">订阅模式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2_account.html">账号类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3_fingate.html">银关类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4_payment.html">支付类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter7_relation.html">关系类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter5_offer.html">挂单类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6_transaction.html">记录类信息</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api2_doc.html">API说明</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk_java.html">Java SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_python.html">Python SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_php.html">PHP SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_nodejs.html">Node.JS SDK</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Jingtum</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>交易模式</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>交易模式<a class="headerlink" href="chapter1_modes.html#id1" title="永久链接至标题">¶</a></h1>
+<p>井通区块链有三种工作模式，分别是同步模式、异步模式以及订阅模式，其中订阅模式是井通系统推荐的使用模式。
+用户异步提交交易请求，之后井通系统将交易结果推送给用户，让用户实现和井通系统的全方位交互模式。</p>
+<div class="section" id="id2">
+<h2>同步模式<a class="headerlink" href="chapter1_modes.html#id2" title="永久链接至标题">¶</a></h2>
+<img alt="_images/sync_transaction.jpg" class="align-center" src="http://developer.jingtum.com/_images/sync_transaction.jpg" />
+<p>Synchronous Mode，同步模式是用户请求对服务的操作之后，同步等待交易结果的返回。
+同步模式可以即时获得交易结果，为用户之后的操作提供交易信息，同步模式的处理流程是顺序性的。
+同步模式需要等待服务器对交易的确认，即等待交易的入账，有一定的延迟和阻塞。
+在同步模式中，用户即时做出请求，之后服务端即刻返回结果给用户，用户被阻塞在该请求中，直至该请求返回。</p>
+</div>
+<div class="section" id="id3">
+<h2>异步模式<a class="headerlink" href="chapter1_modes.html#id3" title="永久链接至标题">¶</a></h2>
+<img alt="_images/async_transaction.jpg" class="align-center" src="http://developer.jingtum.com/_images/async_transaction.jpg" />
+<p>Asynchronous Mode，是用户请求对服务的操作之后，用户就进行其他操作，之后再查询交易的结果，不用等待交易结果的返回。
+异步模式为用户提供了快捷的服务操作模式，只要用户钱包数额的充足以及交易信息的有效，井通系统保证用户交易的成功。
+异步操作减少了对系统资源的占用，避免阻塞，提高了程序的效率。异步操作需要程序之后查询交易的结果。
+在异步模式下，用户请求之后用户即可执行其他的操作，之后用户通过查询来获得请求的结果，
+用户不阻塞在请求操作中，可以提供用户请求的并发量，但需要用户之后自己主动查询下交易结果。</p>
+</div>
+<div class="section" id="id4">
+<h2>订阅模式<a class="headerlink" href="chapter1_modes.html#id4" title="永久链接至标题">¶</a></h2>
+<img alt="_images/subscribe_transaction.jpg" class="align-center" src="http://developer.jingtum.com/_images/subscribe_transaction.jpg" />
+<p>Subscription Mode，订阅模式让用户的交易操作，不需要对交易结果进行查询操作。井通系统将用户的交易结果推送给用户，
+避免用户的轮询操作。 同时，订阅模式将用户的被动交易信息也推送给用户，例如用户收到他人的支付、用户的挂单操作被他人吃掉等，无需用户主动查询。
+在订阅模式中，用户提交请求之后，也不阻塞在请求操作中，之后服务端将请求结果通知给用户，消除用户查询交易结果的动作，
+使用户专注在业务上面。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chapter2_account.html" class="btn btn-neutral float-right" title="账号类交易" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chapter1_concepts.html" class="btn btn-neutral" title="基本概念" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Jintum Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

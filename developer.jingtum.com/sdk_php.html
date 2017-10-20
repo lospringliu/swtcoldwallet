@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PHP SDK &mdash; Jingtum 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="Jingtum 1.0.0 文档" href="index.html"/>
+        <link rel="next" title="Node.JS SDK" href="sdk_nodejs.html"/>
+        <link rel="prev" title="Python SDK" href="sdk_python.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jingtum
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">文档内容</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_start.html">接入流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_concepts.html">基本概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_modes.html">交易模式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2_account.html">账号类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3_fingate.html">银关类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4_payment.html">支付类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter7_relation.html">关系类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter5_offer.html">挂单类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6_transaction.html">记录类信息</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api2_doc.html">API说明</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sdk_java.html">Java SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_python.html">Python SDK</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="sdk_php.html#">PHP SDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdk_php.html#id1">环境准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_php.html#id2">下载安装</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_nodejs.html">Node.JS SDK</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Jingtum</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>PHP SDK</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="php-sdk">
+<h1>PHP SDK<a class="headerlink" href="sdk_php.html#php-sdk" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>环境准备<a class="headerlink" href="sdk_php.html#id1" title="永久链接至标题">¶</a></h2>
+<p>井通SDK PHP的运行需要PHP支持 JSON（PHP 5.2.x 以上版本）和安装 CURL 扩展程序库。 此外，需要确认接口所使用的井通系统的服务器符合最新的配置，具体内容可参考附录中的系统配置。
+在Ubuntu 14下查询当前安装的软件依赖包，使用</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>apt-cache search php5
+</pre></div>
+</div>
+<p>可以搜索安装的php5程序库。
+以下命令在Ubuntu 14下自动安装curl扩展程序库。</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>sudo apt-get install php5-curl
+</pre></div>
+</div>
+<p>ECDSA文件需要(GNU Multiple Precision (GMP) Arithmetic Library）.</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>sudo apt-get install php5-gmp
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>下载安装<a class="headerlink" href="sdk_php.html#id2" title="永久链接至标题">¶</a></h2>
+<p>1、通过以下链接地址下载最新版本SDK：</p>
+<p>请点击链接下载sdk包
+github下载地址：<a class="reference external" href="https://github.com/jingtum/jingtum-php-sdk.git">https://github.com/jingtum/jingtum-php-sdk.git</a></p>
+<p>2、使用composer安装方法：
+首先保证系统安装了composer。如果没有，则需要安装Composer工具，具体可以参考 Composer 的说明。</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>curl -sS https://getcomposer.org/installer <span class="p">|</span> php
+</pre></div>
+</div>
+<p>在当前目录下的composer.json中加入PHP SDK的程序信息，如：</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">&quot;require&quot;: {</span>
+<span class="x"> &quot;jingtum/jingtum-php-sdk&quot;: &quot;dev-master&quot;</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+<p>运行以下命令安装：</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">php composer.phar install</span>
+</pre></div>
+</div>
+<p>程序示例</p>
+<p>可参见https://github.com/jingtum/jingtum-php-sdk/examples下的示例。</p>
+<p>产生新的井通帐号</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">//Set the FinGate instance</span>
+<span class="x">$fin_gate = FinGate::getInstance();</span>
+
+<span class="x">//Set the work mode</span>
+<span class="x">$fin_gate-&gt;setMode(FinGate::DEVELOPMENT);</span>
+
+<span class="x">//Set up the FinGate account</span>
+<span class="x">$fin_gate-&gt;setAccount(&#39;sha4eGoQu......V3YQ4&#39;);</span>
+
+<span class="x">//Create the wallet from FinGate</span>
+<span class="x">$wallet1 = $fin_gate-&gt;createWallet();</span>
+
+<span class="x">//active the wallet</span>
+<span class="x">$fin_gate-&gt;activeWallet($wallet1-&gt;getAddress(), &#39;call_back_func&#39;);</span>
+</pre></div>
+</div>
+<p>查询帐号的余额信息</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">//Set the FinGate instance</span>
+<span class="x">$fin_gate = FinGate::getInstance();</span>
+
+<span class="x">//Set the work mode</span>
+<span class="x">$fin_gate-&gt;setMode(FinGate::DEVELOPMENT);</span>
+
+<span class="x">//Setup a test wallet</span>
+<span class="x">$wallet = new Wallet(&#39;sha4eGoQu......V3YQ4&#39;);</span>
+
+<span class="x">//Get the balance</span>
+<span class="x">$res = $wallet-&gt;getBalance();</span>
+</pre></div>
+</div>
+<p>使用帐号进行支付</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">//Set the FinGate instance</span>
+<span class="x">$fin_gate = FinGate::getInstance();</span>
+
+<span class="x">//Set the work mode</span>
+<span class="x">$fin_gate-&gt;setMode(FinGate::DEVELOPMENT);</span>
+
+<span class="x">//Setup two wallets for testing</span>
+<span class="x">$wallet2 = new Wallet(&#39;sha4eGoQu......V3YQ4&#39;);</span>
+
+<span class="x">$wallet3 = new Wallet(&#39;snwjtucx9......MhFiK9&#39;);</span>
+
+<span class="x">//A payment obj for testing</span>
+<span class="x">$op = new PaymentOperation($wallet2);</span>
+
+<span class="x">//Create the payment amount</span>
+<span class="x">$pay_value = 0.01;</span>
+<span class="x">$amt1 = new Amount($pay_value, &#39;SWT&#39;, &#39;&#39;);</span>
+
+<span class="x">//Set the destination address</span>
+<span class="x">$op-&gt;setDestAddress($wallet3-&gt;getAddress());</span>
+
+<span class="x">//Set the amount to pay</span>
+<span class="x">$op-&gt;setAmount($amt1);</span>
+
+<span class="x">//Optional settings</span>
+<span class="x">$client_id = &quot;JTtest&quot;.time();</span>
+<span class="x">$op-&gt;setClientID($client_id);//optional, if not provided, SDK will generate an internal one</span>
+<span class="x">$op-&gt;setMemo(&quot;SWT PAYMENT for testing&quot;.$client_id);//memo used in the payment</span>
+<span class="x">$op-&gt;setValidate(false);//setup the syn mode, default is true</span>
+
+<span class="x">$op-&gt;submit(&#39;call_back_func&#39;);</span>
+</pre></div>
+</div>
+<p>生成挂单</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">//Set the FinGate instance</span>
+<span class="x">$fin_gate = FinGate::getInstance();</span>
+
+<span class="x">//Set the work mode</span>
+<span class="x">$fin_gate-&gt;setMode(FinGate::DEVELOPMENT);</span>
+
+<span class="x">$wallet1 = new Wallet(&#39;snwjtucx9......MbVz8hFiK9&#39;);</span>
+
+<span class="x">$op = new OrderOperation($wallet1);</span>
+<span class="x">$op-&gt;setType($op-&gt;SELL);</span>
+<span class="x">$op-&gt;setPair(&quot;SWT/CNY:janxMdr...GewMMeHa9f&quot;);</span>
+<span class="x">$op-&gt;setAmount(1000.00 );</span>
+<span class="x">$op-&gt;setValidate(true);</span>
+
+<span class="x">$op-&gt;submit(&#39;call_back_func&#39;);</span>
+</pre></div>
+</div>
+<p>取消挂单</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">//Set the FinGate instance</span>
+<span class="x">$fin_gate = FinGate::getInstance();</span>
+
+<span class="x">//Set the work mode</span>
+<span class="x">$fin_gate-&gt;setMode(FinGate::DEVELOPMENT);</span>
+
+<span class="x">$wallet1 = new Wallet(&#39;snwjtucx9......MbVz8hFiK9&#39;);</span>
+<span class="x">$op = new CancelOrderOperation($wallet);</span>
+
+<span class="x">$op-&gt;setOrderNum(54);</span>
+<span class="x">$op-&gt;setValidate(&#39;true&#39;);</span>
+
+<span class="x">$op-&gt;submit(&#39;call_back_func&#39;);</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sdk_nodejs.html" class="btn btn-neutral float-right" title="Node.JS SDK" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sdk_python.html" class="btn btn-neutral" title="Python SDK" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Jintum Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

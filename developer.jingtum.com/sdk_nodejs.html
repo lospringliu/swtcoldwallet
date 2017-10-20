@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Node.JS SDK &mdash; Jingtum 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="Jingtum 1.0.0 文档" href="index.html"/>
+        <link rel="prev" title="PHP SDK" href="sdk_php.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jingtum
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">文档内容</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_start.html">接入流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_concepts.html">基本概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_modes.html">交易模式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2_account.html">账号类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3_fingate.html">银关类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4_payment.html">支付类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter7_relation.html">关系类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter5_offer.html">挂单类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6_transaction.html">记录类信息</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api2_doc.html">API说明</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sdk_java.html">Java SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_python.html">Python SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_php.html">PHP SDK</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="sdk_nodejs.html#">Node.JS SDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdk_nodejs.html#id1">环境准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_nodejs.html#id2">下载安装</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Jingtum</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Node.JS SDK</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="node-js-sdk">
+<h1>Node.JS SDK<a class="headerlink" href="sdk_nodejs.html#node-js-sdk" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>环境准备<a class="headerlink" href="sdk_nodejs.html#id1" title="永久链接至标题">¶</a></h2>
+<p>井通NODE.JS SDK的运行需要安装NODEJS v4.5 以上版本。</p>
+</div>
+<div class="section" id="id2">
+<h2>下载安装<a class="headerlink" href="sdk_nodejs.html#id2" title="永久链接至标题">¶</a></h2>
+<p>1、 通过以下链接地址下载最新版本SDK：</p>
+<p>请点击链接下载sdk包</p>
+<p>github下载地址：<a class="reference external" href="https://github.com/jingtum/jingtum-js-sdk.git">https://github.com/jingtum/jingtum-js-sdk.git</a></p>
+<p>2、安装方法：
+安装好NODEJS后，最好通过npm工具来安装Node SDK.此外，需要确认接口所使用的井通系统的服务器符合最新的配置，具体内容可参考附录中的系统配置。</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>npm install jingtum-sdk
+</pre></div>
+</div>
+<p>安装成功Jingtum-sdk后，可以在程序中使用；</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">JingtumSDK</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>来调用井通SDK的功能函数。</p>
+<p>程序示例</p>
+<p>可参见https://github.com/jingtum/jingtum-js-sdk/examples下的示例。</p>
+<p>产生新的井通帐号</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">wallet1</span> <span class="o">=</span> <span class="nx">fingate</span><span class="p">.</span><span class="nx">createWallet</span><span class="p">();</span>
+
+<span class="c1">//or</span>
+    <span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">walletNew</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">(</span><span class="s1">&#39;shNK......5kK&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>查询帐号的余额信息</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">).</span><span class="nx">Wallet</span><span class="p">;</span>
+<span class="c1">// construct one wallet</span>
+<span class="kd">var</span> <span class="nx">my_wallet</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">(</span><span class="s1">&#39;shNKNxg......AKBFy5W5kK&#39;</span><span class="p">);</span>
+
+<span class="c1">// get all balances</span>
+<span class="nx">my_wallet</span><span class="p">.</span><span class="nx">getBalance</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// process balance</span>
+<span class="p">});</span>
+
+<span class="c1">// get swt balance</span>
+<span class="nx">my_wallet</span><span class="p">.</span><span class="nx">getBalance</span><span class="p">(</span><span class="s1">&#39;SWT&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// process balance</span>
+<span class="p">});</span>
+
+<span class="c1">// get usd balance</span>
+<span class="nx">my_wallet</span><span class="p">.</span><span class="nx">getBalance</span><span class="p">(</span><span class="s1">&#39;USD&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// process balance</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>使用帐号进行支付</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// create payment operation</span>
+<span class="kd">var</span> <span class="nx">op</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">PaymentOperation</span><span class="p">(</span><span class="nx">wallet1</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setDestAddress</span><span class="p">(</span><span class="s1">&#39;jp53t......DucnwVk&#39;</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setAmount</span><span class="p">(</span><span class="nx">amt</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setMemo</span><span class="p">(</span><span class="s2">&quot;Test payment on 20161117&quot;</span><span class="p">);</span>
+
+<span class="c1">// if not set, PaymentOperation will assign one</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setClientId</span><span class="p">(</span><span class="s2">&quot;20611171957&quot;</span><span class="p">);</span>
+<span class="c1">// sync mode</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setValidate</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// submit payment</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>生成挂单</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="kd">var</span> <span class="nx">JingtumSDK</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">(</span><span class="s1">&#39;shNK......y5W5kK&#39;</span><span class="p">);</span>
+
+<span class="c1">// create offer operation</span>
+<span class="kd">var</span> <span class="nx">op</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">OrderOperation</span><span class="p">(</span><span class="nx">wallet1</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setType</span><span class="p">(</span><span class="nx">op</span><span class="p">.</span><span class="nx">SELL</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setPair</span><span class="p">(</span><span class="s2">&quot;SWT/CNY:janxMdr...GewMMeHa9f&quot;</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setAmount</span><span class="p">(</span><span class="mf">1000.00</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setPrice</span><span class="p">(</span><span class="mf">0.0005</span><span class="p">);</span>
+<span class="c1">// sync mode</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setValidate</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// submit payment</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>取消挂单</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="kd">var</span> <span class="nx">JingtumSDK</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">(</span><span class="s1">&#39;shNK......y5W5kK&#39;</span><span class="p">);</span>
+
+<span class="c1">// create offer cancel operation</span>
+<span class="kd">var</span> <span class="nx">op</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">CancelOrderOperation</span><span class="p">(</span><span class="nx">wallet1</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setSequence</span><span class="p">(</span><span class="mi">54</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setValidate</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// submit offer cancel</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="sdk_php.html" class="btn btn-neutral" title="PHP SDK" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Jintum Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

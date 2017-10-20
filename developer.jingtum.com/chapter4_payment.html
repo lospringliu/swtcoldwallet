@@ -1,0 +1,747 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>支付类交易 &mdash; Jingtum 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="Jingtum 1.0.0 文档" href="index.html"/>
+        <link rel="next" title="关系类交易" href="chapter7_relation.html"/>
+        <link rel="prev" title="银关类交易" href="chapter3_fingate.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jingtum
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">文档内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chapter1_start.html">接入流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_concepts.html">基本概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_modes.html">交易模式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2_account.html">账号类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3_fingate.html">银关类交易</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="chapter4_payment.html#">支付类交易</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter4_payment.html#id2">提交支付</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#java-example">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#python-example">Python Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#php-example">PHP Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#node-js-example">Node.JS Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter4_payment.html#id3">查询支付选择</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#code-java-choice">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#code-python-choice">Python Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#code-php-choice">PHP Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#code-nodejs-choice">Node.JS Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter4_payment.html#id8">按支付选择支付</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#code-java-choice-payment">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#code-python-choice-payment">Python Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#code-php-choice-payment">PHP Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#code-nodejs-choice-payment">Node.JS Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter4_payment.html#id13">查询支付历史</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#code-java-payment-list">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#code-python-payment-list">Python Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#code-php-payment-list">PHP Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter4_payment.html#code-nodejs-payment-list">Node.JS Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter7_relation.html">关系类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter5_offer.html">挂单类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6_transaction.html">记录类信息</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api2_doc.html">API说明</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk_java.html">Java SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_python.html">Python SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_php.html">PHP SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_nodejs.html">Node.JS SDK</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Jingtum</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>支付类交易</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>支付类交易<a class="headerlink" href="chapter4_payment.html#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>提交支付<a class="headerlink" href="chapter4_payment.html#id2" title="永久链接至标题">¶</a></h2>
+<p>支付是区块链系统的一个主要功能，实现账号之间点对点的电子资源转移。</p>
+<p>在井通系统中，资源的转移通过账号地址即可实现，无需用户的业务信息。在井通系统中，用户不仅可以支付自己拥有的资源，
+也可以选择支付自己账号中没有的资源。当用户支付自己账号中没有的资源时，需要提交支付路径查询并选择相应支付路径。
+系统根据用户账号中含有资源，同时在系统中选择对应的支付路径进行资产替换，实现目标资产的支付。
+支付路径的实现依赖于多资产的撮合算法。具体请参考查询支付路径。如果支付路径不存在，则支付无法进行。</p>
+<p>支付操作对象初始化时需要一个井通账号对象，必须提交的参数有对方的井通地址和支付的金额。
+支付操作还可以设定操作模式（同步或异步）和一个操作单号。</p>
+<p>支付操作中也可以使用setMemo设定一些注释字段。</p>
+<p>井通系统中支付交易收取相应的SWT手续费，即使交易失败。</p>
+<p>目前，井通环境中只有一个井通银关，所以资产的支付是一个银关之间资产的交易，
+一个银关下的同一种资产的支付可以实现直接支付，无需路径。
+同时，在井通系统中SWT没有发行银关，支付时无需指定发行银关</p>
+<ul class="simple">
+<li><a class="reference internal" href="chapter4_payment.html#code-java-payment"><span class="std std-ref">Java Example</span></a></li>
+<li><a class="reference internal" href="chapter4_payment.html#code-python-payment"><span class="std std-ref">Python Example</span></a></li>
+<li><a class="reference internal" href="chapter4_payment.html#code-php-payment"><span class="std std-ref">PHP Example</span></a></li>
+<li><a class="reference internal" href="chapter4_payment.html#code-nodejs-payment"><span class="std std-ref">Node.JS Example</span></a></li>
+</ul>
+<div class="section" id="java-example">
+<span id="code-java-payment"></span><h3>Java Example<a class="headerlink" href="chapter4_payment.html#java-example" title="永久链接至标题">¶</a></h3>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="n">Wallet</span> <span class="n">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Wallet</span><span class="o">(</span><span class="s">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="o">);</span>
+
+<span class="c1">// prepare payment amount</span>
+<span class="n">Amount</span> <span class="n">amt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Amount</span><span class="o">();</span>
+<span class="n">amt</span><span class="o">.</span><span class="na">setIssuer</span><span class="o">(</span><span class="s">&quot;&quot;</span><span class="o">);</span>
+<span class="n">amt</span><span class="o">.</span><span class="na">setCurrency</span><span class="o">(</span><span class="s">&quot;SWT&quot;</span><span class="o">);</span>
+<span class="n">amt</span><span class="o">.</span><span class="na">setValue</span><span class="o">(</span><span class="mf">1.1</span><span class="o">);</span>
+
+<span class="c1">// create payment operation</span>
+<span class="n">PaymentOperation</span> <span class="n">op</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PaymentOperation</span><span class="o">(</span><span class="n">wallet1</span><span class="o">);</span>
+<span class="n">op</span><span class="o">.</span><span class="na">setDestAddress</span><span class="o">(</span><span class="s">&quot;jnYcyWcn......z62iMQSfaSXUx&quot;</span><span class="o">);</span>
+<span class="n">op</span><span class="o">.</span><span class="na">setAmount</span><span class="o">(</span><span class="n">amt</span><span class="o">);</span>
+<span class="n">op</span><span class="o">.</span><span class="na">setMemo</span><span class="o">(</span><span class="s">&quot;Test payment on 20161117&quot;</span><span class="o">);</span>
+<span class="c1">// if not set a client id, PaymentOperation will assign one</span>
+<span class="n">op</span><span class="o">.</span><span class="na">setClientId</span><span class="o">(</span><span class="s">&quot;20611171957&quot;</span><span class="o">);</span>
+<span class="c1">// sync mode</span>
+<span class="n">op</span><span class="o">.</span><span class="na">setValidate</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+
+<span class="c1">// submit payment</span>
+<span class="n">op</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">PaymentListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onComplete</span><span class="o">(</span><span class="n">result</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// process result</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-example">
+<span id="code-python-payment"></span><h3>Python Example<a class="headerlink" href="chapter4_payment.html#python-example" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># construct source wallet</span>
+<span class="n">wallet1</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">(</span><span class="s2">&quot;shVC2gdG......gijqk4EsuqDF&quot;</span><span class="p">);</span>
+
+<span class="c1"># prepare payment amount</span>
+<span class="n">amt</span> <span class="o">=</span> <span class="n">Amount</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;CNY&quot;</span><span class="p">,</span> <span class="s2">&quot;jBciDE8Q3uJ......iUNM775AMKHEbBLS&quot;</span><span class="p">)</span>
+
+<span class="c1"># create payment operation</span>
+<span class="n">op</span> <span class="o">=</span> <span class="n">PaymentOperation</span><span class="p">(</span><span class="n">wallet1</span><span class="p">);</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setDestAddress</span><span class="p">(</span><span class="s2">&quot;jnYcyWcn......z62iMQSfaSXUx&quot;</span><span class="p">);</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setMemo</span><span class="p">(</span><span class="s2">&quot;Test payment on 20161117&quot;</span><span class="p">);</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setAmount</span><span class="p">(</span><span class="n">amt</span><span class="p">);</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setClientId</span><span class="p">(</span><span class="s2">&quot;201611171957&quot;</span><span class="p">);</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setValidate</span><span class="p">(</span><span class="n">true</span><span class="p">);</span>
+
+<span class="c1"># submit payment</span>
+<span class="n">ret</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">submit</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="php-example">
+<span id="code-php-payment"></span><h3>PHP Example<a class="headerlink" href="chapter4_payment.html#php-example" title="永久链接至标题">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">// construct source wallet</span>
+<span class="x">$wallet1 = new Wallet(&#39;snwjtucx9......MbVz8hFiK9&#39;);</span>
+
+<span class="x">// prepare payment amount</span>
+<span class="x">$amount = new Amount(&#39;1.0&#39;, &#39;USD&#39;, &#39;jBciDE8Q3uJ......iUNM775AMKHEbBLS&#39;);</span>
+
+<span class="x">// create payment operation</span>
+<span class="x">$op = new PaymentOperation($wallet1);</span>
+<span class="x">$op-&gt;setAmount($amount);</span>
+<span class="x">$dest_address = &#39;j......RWn96DkukG4bwdtyTh&#39;;</span>
+<span class="x">$op-&gt;setDestAddress($dest_address);</span>
+<span class="x">$op-&gt;setMemo(&quot;Test payment on 20161117&quot;);</span>
+<span class="x">$op-&gt;setClientId(&#39;20611171957&#39;);</span>
+<span class="x">// sync mode</span>
+<span class="x">$op-&gt;setValidate(true);</span>
+
+<span class="x">// submit payment</span>
+<span class="x">$res = $op-&gt;submit();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="node-js-example">
+<span id="code-nodejs-payment"></span><h3>Node.JS Example<a class="headerlink" href="chapter4_payment.html#node-js-example" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="kd">var</span> <span class="nx">JingtumSDK</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">Amount</span> <span class="o">=</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">Amount</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">(</span><span class="s1">&#39;shNK......y5W5kK&#39;</span><span class="p">);</span>
+
+<span class="c1">// prepare payment amount</span>
+<span class="kd">var</span> <span class="nx">amt</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Amount</span><span class="p">(</span><span class="s1">&#39;0.01&#39;</span><span class="p">,</span> <span class="s1">&#39;SWT&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+
+<span class="c1">// create payment operation</span>
+<span class="kd">var</span> <span class="nx">op</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">PaymentOperation</span><span class="p">(</span><span class="nx">wallet1</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setDestAddress</span><span class="p">(</span><span class="s1">&#39;jp53t......DucnwVk&#39;</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setAmount</span><span class="p">(</span><span class="nx">amt</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setMemo</span><span class="p">(</span><span class="s2">&quot;Test payment on 20161117&quot;</span><span class="p">);</span>
+
+<span class="c1">// if not set, PaymentOperation will assign one</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setClientId</span><span class="p">(</span><span class="s2">&quot;20611171957&quot;</span><span class="p">);</span>
+<span class="c1">// sync mode</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setValidate</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// submit payment</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>查询支付选择<a class="headerlink" href="chapter4_payment.html#id3" title="永久链接至标题">¶</a></h2>
+<p>在井通系统中进行支付时，用户不仅可以支付自己拥有的资源，也可以选择支付自己账号中没有的资源。</p>
+<p>当用户支付自己账号中没有的资源时，需要提交支付选择查询并选择相应支付选择。支付选择这里是指一种用户通
+兑换另一种用户通的寻径方法。如果井通系统中存在相应的资源挂单，则井通系统会自动使用系统中的挂单来计算支付选择。
+两种不同的用户通之间可以有多种支付选择。</p>
+<p>例如：</p>
+<p>A要支付B 100USD，但A只有 1000RMB，系统中同时存在多个USD和RMB之间的挂单。
+账号M挂单要用100USD交换700RMB，账号N挂单挂单要用200USD交换1500RMB，那么存在两条支付选择如下：</p>
+<p>A 700RMB -&gt; M （挂单100USD 换 700 RMB）-&gt; B 100USD。</p>
+<p>A 750RMB -&gt; N （挂单200USD 换 1500 RMB）-&gt; B 100USD。</p>
+<p>井通系统可以计算出所有的支付选择，然后用户使用选择好的选择进行支付。
+查询支付选择方法的输入参数为接受方和用户通的种类，以及数量。
+查询选择的结果为一个Choices数组，里面每个单位为所需用户通的金额（用户通符号，发行方和价值）以及相应的选择值（KEY），
+格式如下：</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;choice&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;issuer&quot;</span><span class="p">:</span> <span class="s2">&quot;jpidrAsPWDTTHhbBf9BCn5suWHQJqhynVi&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0.001&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;f53b09afcf9e1758a7b647f2f738c86426cabfc1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><a class="reference internal" href="chapter4_payment.html#code-java-choice"><span class="std std-ref">Java Example</span></a></li>
+<li><a class="reference internal" href="chapter4_payment.html#code-python-choice"><span class="std std-ref">Python Example</span></a></li>
+<li><a class="reference internal" href="chapter4_payment.html#code-php-choice"><span class="std std-ref">PHP Example</span></a></li>
+<li><a class="reference internal" href="chapter4_payment.html#code-nodejs-choice"><span class="std std-ref">Node.JS Example</span></a></li>
+</ul>
+<div class="section" id="code-java-choice">
+<span id="id4"></span><h3>Java Example<a class="headerlink" href="chapter4_payment.html#code-java-choice" title="永久链接至标题">¶</a></h3>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="n">Wallet</span> <span class="n">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Wallet</span><span class="o">(</span><span class="s">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="o">);</span>
+
+<span class="c1">// prepare payment choice amount</span>
+<span class="n">Amount</span> <span class="n">amt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Amount</span><span class="o">();</span>
+<span class="n">amt</span><span class="o">.</span><span class="na">setIssuer</span><span class="o">(</span><span class="s">&quot;jBciDE8......75AMKHEbBLS&quot;</span><span class="o">);</span>
+<span class="n">amt</span><span class="o">.</span><span class="na">setCurrency</span><span class="o">(</span><span class="s">&quot;USD&quot;</span><span class="o">);</span>
+<span class="n">amt</span><span class="o">.</span><span class="na">setValue</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span>
+
+<span class="c1">// query payment choices</span>
+<span class="n">ChoiceCollection</span> <span class="n">choices</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="na">getChoices</span><span class="o">(</span><span class="s">&quot;jHb9CJA......6DkukG4bwdtyTh&quot;</span><span class="o">,</span><span class="n">amt</span><span class="o">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-python-choice">
+<span id="id5"></span><h3>Python Example<a class="headerlink" href="chapter4_payment.html#code-python-choice" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># construct source wallet</span>
+<span class="n">wallet1</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">(</span><span class="s2">&quot;shVC2gdG......gijqk4EsuqDF&quot;</span><span class="p">);</span>
+
+<span class="c1"># prepare payment choice amount</span>
+<span class="n">amt</span> <span class="o">=</span> <span class="n">Amount</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;CNY&quot;</span><span class="p">,</span> <span class="n">test_issuer</span><span class="p">);</span>
+
+<span class="c1"># query payment choices</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="n">getChoices</span><span class="p">(</span><span class="s2">&quot;jHb9CJA......6DkukG4bwdtyTh&quot;</span><span class="p">,</span> <span class="n">amt</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-php-choice">
+<span id="id6"></span><h3>PHP Example<a class="headerlink" href="chapter4_payment.html#code-php-choice" title="永久链接至标题">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">// construct source wallet</span>
+<span class="x">$wallet1 = new Wallet(&#39;snwjtucx9......MbVz8hFiK9&#39;);</span>
+
+<span class="x">// prepare payment choice amount</span>
+<span class="x">$amount = new [&#39;currency&#39;] = &#39;USD&#39;;</span>
+<span class="x">$amount[&#39;value&#39;] = &#39;100&#39;;</span>
+<span class="x">$amount[&#39;issuer&#39;] = &#39;jBciDE8Q3uJjf1......S&#39;;</span>
+
+<span class="x">// query payment choices</span>
+<span class="x">$ret = $wallet1-&gt;getChoices(&#39;jHb9CJAWyB......ukG4bwdtyTh&#39;, $amount);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-nodejs-choice">
+<span id="id7"></span><h3>Node.JS Example<a class="headerlink" href="chapter4_payment.html#code-nodejs-choice" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">Amount</span> <span class="o">=</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">Amount</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">(</span><span class="s1">&#39;shNK......y5W5kK&#39;</span><span class="p">);</span>
+
+<span class="c1">// prepare payment choice amount</span>
+<span class="kd">var</span> <span class="nx">amt</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Amount</span><span class="p">(</span><span class="s1">&#39;0.01&#39;</span><span class="p">,</span> <span class="s1">&#39;CNY&#39;</span><span class="p">,</span> <span class="s1">&#39;jMcCACc......M5FCk7tT&#39;</span><span class="p">);</span>
+
+<span class="c1">// query payment choices</span>
+<span class="nx">wallet1</span><span class="p">.</span><span class="nx">getChoices</span><span class="p">(</span><span class="s1">&#39;jD2RbZEp......sAhRYbpZ&#39;</span><span class="p">,</span> <span class="nx">amt</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>按支付选择支付<a class="headerlink" href="chapter4_payment.html#id8" title="永久链接至标题">¶</a></h2>
+<p>按支付选择，即在支付的时候需指定用户使用的支付选择。
+这一功能需要和查询支付选择结合使用，用户在查询到支付选择之后，可以选择对于用户最优的选择进行支付。
+同时，用户可以指定支付选择最大可以使用的支付额度，因为市场每时每刻都在变化，支付选择也是动态的在变化。</p>
+<ul class="simple">
+<li><a class="reference internal" href="chapter4_payment.html#code-java-choice-payment"><span class="std std-ref">Java Example</span></a></li>
+<li><a class="reference internal" href="chapter4_payment.html#code-python-choice-payment"><span class="std std-ref">Python Example</span></a></li>
+<li><a class="reference internal" href="chapter4_payment.html#code-php-choice-payment"><span class="std std-ref">PHP Example</span></a></li>
+<li><a class="reference internal" href="chapter4_payment.html#code-nodejs-choice-payment"><span class="std std-ref">Node.JS Example</span></a></li>
+</ul>
+<div class="section" id="code-java-choice-payment">
+<span id="id9"></span><h3>Java Example<a class="headerlink" href="chapter4_payment.html#code-java-choice-payment" title="永久链接至标题">¶</a></h3>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="n">Wallet</span> <span class="n">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Wallet</span><span class="o">(</span><span class="s">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="o">);</span>
+
+<span class="c1">// prepare payment choice amount</span>
+<span class="n">Amount</span> <span class="n">amt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Amount</span><span class="o">();</span>
+<span class="n">amt</span><span class="o">.</span><span class="na">setIssuer</span><span class="o">(</span><span class="s">&quot;jBciDE8......75AMKHEbBLS&quot;</span><span class="o">);</span>
+<span class="n">amt</span><span class="o">.</span><span class="na">setCurrency</span><span class="o">(</span><span class="s">&quot;USD&quot;</span><span class="o">);</span>
+<span class="n">amt</span><span class="o">.</span><span class="na">setValue</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span>
+
+<span class="c1">// query payment choices</span>
+<span class="n">PaymentChoiceCollection</span> <span class="n">choices</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="na">getChoices</span><span class="o">(</span><span class="s">&quot;jHb9CJA......6DkukG4bwdtyTh&quot;</span><span class="o">,</span> <span class="n">amt</span><span class="o">);</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="n">choices</span><span class="o">.</span><span class="na">getData</span><span class="o">().</span><span class="na">size</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// use the first choice</span>
+    <span class="n">PaymentChoice</span> <span class="n">choice1</span> <span class="o">=</span> <span class="n">choices</span><span class="o">.</span><span class="na">getData</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+
+    <span class="c1">// prepare payment operation</span>
+    <span class="n">PaymentOperation</span> <span class="n">op</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PaymentOperation</span><span class="o">(</span><span class="n">wallet1</span><span class="o">);</span>
+    <span class="n">op</span><span class="o">.</span><span class="na">setDestAddress</span><span class="o">(</span><span class="s">&quot;jHb9CJAWyB......ukG4bwdtyTh&quot;</span><span class="o">);</span>
+    <span class="n">op</span><span class="o">.</span><span class="na">setChoice</span><span class="o">(</span><span class="n">choice1</span><span class="o">);</span>
+    <span class="n">op</span><span class="o">.</span><span class="na">setClientId</span><span class="o">(</span><span class="s">&quot;20611171957&quot;</span><span class="o">);</span>
+    <span class="n">op</span><span class="o">.</span><span class="na">setValidate</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+
+    <span class="c1">// submit payment</span>
+    <span class="n">op</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">PaymentListener</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nd">@override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onComplete</span><span class="o">(</span><span class="n">result</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// process result</span>
+        <span class="o">};</span>
+   <span class="o">});</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-python-choice-payment">
+<span id="id10"></span><h3>Python Example<a class="headerlink" href="chapter4_payment.html#code-python-choice-payment" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># construct source wallet</span>
+<span class="n">wallet1</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">(</span><span class="s2">&quot;shVC2gdG......gijqk4EsuqDF&quot;</span><span class="p">);</span>
+
+<span class="c1"># prepare payment choice amount</span>
+<span class="n">amt</span> <span class="o">=</span> <span class="n">Amount</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;CNY&quot;</span><span class="p">,</span> <span class="n">test_issuer</span><span class="p">);</span>
+
+<span class="c1"># query payment choices</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="n">getChoices</span><span class="p">(</span><span class="s2">&quot;jHb9CJA......6DkukG4bwdtyTh&quot;</span><span class="p">,</span> <span class="n">amt</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">count</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1"># use first choice</span>
+    <span class="n">choice1</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;key&quot;</span><span class="p">];</span>
+
+    <span class="c1"># prepare payment operation</span>
+    <span class="n">op</span> <span class="o">=</span> <span class="n">PaymentOperation</span><span class="p">(</span><span class="n">wallet1</span><span class="p">);</span>
+    <span class="n">op</span><span class="o">.</span><span class="n">setDestAddress</span><span class="p">(</span><span class="s1">&#39;jHb9CJAWyB......ukG4bwdtyTh&#39;</span><span class="p">);</span>
+    <span class="n">op</span><span class="o">.</span><span class="n">setChoice</span><span class="p">(</span><span class="n">choice1</span><span class="p">);</span>
+    <span class="n">op</span><span class="o">.</span><span class="n">setValidate</span><span class="p">(</span><span class="bp">True</span><span class="p">);</span>
+    <span class="n">op</span><span class="o">.</span><span class="n">setClientId</span><span class="p">(</span><span class="s2">&quot;JT</span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)));</span>
+
+    <span class="c1"># submit payment</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">callback</span><span class="o">=</span><span class="n">wallet1</span><span class="o">.</span><span class="n">payment_callback</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-php-choice-payment">
+<span id="id11"></span><h3>PHP Example<a class="headerlink" href="chapter4_payment.html#code-php-choice-payment" title="永久链接至标题">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">// construct source wallet</span>
+<span class="x">$wallet1 = new Wallet(&#39;snwjtucx9......MbVz8hFiK9&#39;);</span>
+
+<span class="x">// prepare payment choice amount</span>
+<span class="x">$amount = new [&#39;currency&#39;] = &#39;USD&#39;;</span>
+<span class="x">$amount[&#39;value&#39;] = &#39;100&#39;;</span>
+<span class="x">$amount[&#39;issuer&#39;] = &#39;jBciDE8Q3uJjf1......S&#39;;</span>
+
+<span class="x">// query payment choices</span>
+<span class="x">$ret = $wallet1-&gt;getChoices(&#39;jHb9CJAWyB......ukG4bwdtyTh&#39;, $amount);</span>
+
+<span class="x">if (count($ret) &gt; 0) {</span>
+<span class="x">    // use first choice</span>
+<span class="x">    $choice = $res[0][&#39;key&#39;];</span>
+
+<span class="x">    // prepare payment operation</span>
+<span class="x">    $op = new PaymentOperation($wallet1);</span>
+<span class="x">    $op-&gt;setDestAddress($dest_address);</span>
+<span class="x">    $op-&gt;setChoice($choice1);</span>
+<span class="x">    $op-&gt;setValidate(true);</span>
+
+<span class="x">    // submit payment</span>
+<span class="x">    $res = $op-&gt;submit();</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-nodejs-choice-payment">
+<span id="id12"></span><h3>Node.JS Example<a class="headerlink" href="chapter4_payment.html#code-nodejs-choice-payment" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">Amount</span> <span class="o">=</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">Amount</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">(</span><span class="s1">&#39;shNK......y5W5kK&#39;</span><span class="p">);</span>
+
+<span class="c1">// prepare payment choice amount</span>
+<span class="kd">var</span> <span class="nx">amt</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Amount</span><span class="p">(</span><span class="s1">&#39;0.01&#39;</span><span class="p">,</span> <span class="s1">&#39;CNY&#39;</span><span class="p">,</span> <span class="s1">&#39;jMcCACc......M5FCk7tT&#39;</span><span class="p">);</span>
+
+<span class="c1">// query payment choices</span>
+<span class="nx">wallet1</span><span class="p">.</span><span class="nx">getChoices</span><span class="p">(</span><span class="s1">&#39;jD2RbZEp......sAhRYbpZ&#39;</span><span class="p">,</span> <span class="nx">amt</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// use first choice</span>
+        <span class="kd">var</span> <span class="nx">op</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PaymentOperation</span><span class="p">(</span><span class="nx">wallet1</span><span class="p">);</span>
+        <span class="nx">op</span><span class="p">.</span><span class="nx">setChoice</span><span class="p">(</span><span class="nx">ret</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;key&#39;</span><span class="p">]);</span>
+        <span class="nx">op</span><span class="p">.</span><span class="nx">setDestAddress</span><span class="p">(</span><span class="nx">dest_address</span><span class="p">);</span>
+        <span class="nx">op</span><span class="p">.</span><span class="nx">setClientId</span><span class="p">(</span><span class="s1">&#39;20611171957&#39;</span><span class="p">);</span>
+        <span class="nx">op</span><span class="p">.</span><span class="nx">setValidate</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+        <span class="c1">// submit payment</span>
+        <span class="nx">op</span><span class="p">.</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err2</span><span class="p">,</span> <span class="nx">data2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// process result</span>
+        <span class="p">});</span>
+
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>查询支付历史<a class="headerlink" href="chapter4_payment.html#id13" title="永久链接至标题">¶</a></h2>
+<p>当井通账号的支付交易完成后，所有的记录都存储在井通区块链上。
+用户可以查询账号的支付历史，包括收款方，时间，通的种类和数量。
+用户即可以通过交易完成后的HASH值来查询单一交易的情况，也可以根据条件来过滤所查询的支付历史。
+参数包括支付方地址，对方地址，是否移除失败的支付历史，支付方向，返回的每页数据量、返回第几页的数据。
+返回的结果信息里面的每个对象的字段解释信息请见数据格式的说明部分。
+请注意如果不设置选项的话，默认返回的支付历史是第一页的10条数据。</p>
+<p>参数类型说明如下：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="15%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>source_account</td>
+<td>String</td>
+<td>支付方地址</td>
+</tr>
+<tr class="row-odd"><td>destination_account</td>
+<td>String</td>
+<td>支付接收方地</td>
+</tr>
+<tr class="row-even"><td>results_per_page</td>
+<td>Integer</td>
+<td>返回的每页数据量，默认每页10项</td>
+</tr>
+<tr class="row-odd"><td>page</td>
+<td>Integer</td>
+<td>返回第几页的数据，从第1页开始</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference internal" href="chapter4_payment.html#code-java-payment-list"><span class="std std-ref">Java Example</span></a></li>
+<li><a class="reference internal" href="chapter4_payment.html#code-python-payment-list"><span class="std std-ref">Python Example</span></a></li>
+<li><a class="reference internal" href="chapter4_payment.html#code-php-payment-list"><span class="std std-ref">PHP Example</span></a></li>
+<li><a class="reference internal" href="chapter4_payment.html#code-nodejs-payment-list"><span class="std std-ref">Node.JS Example</span></a></li>
+</ul>
+<div class="section" id="code-java-payment-list">
+<span id="id14"></span><h3>Java Example<a class="headerlink" href="chapter4_payment.html#code-java-payment-list" title="永久链接至标题">¶</a></h3>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="n">Wallet</span> <span class="n">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Wallet</span><span class="o">(</span><span class="s">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="o">);</span>
+
+<span class="c1">// get one payment</span>
+<span class="n">Payment</span> <span class="n">payment</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="na">getPayment</span><span class="o">(</span><span class="s">&quot;D1B87A3E46792......730DA0564ACC7&quot;</span><span class="o">);</span>
+
+<span class="c1">// get payment history</span>
+<span class="n">PaymentCollection</span> <span class="n">pc</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="na">getPaymentList</span><span class="o">();</span>
+
+<span class="c1">// query by options</span>
+<span class="n">Options</span> <span class="n">options</span> <span class="o">=</span> <span class="o">{</span><span class="s">&quot;destination_account&quot;</span><span class="o">:</span> <span class="s">&quot;jp53tPyrQL......UXUDucnwVk&quot;</span><span class="o">,</span> <span class="s">&quot;page&quot;</span><span class="o">:</span> <span class="s">&quot;1&quot;</span><span class="o">};</span>
+<span class="n">PaymentCollection</span> <span class="n">pc</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="na">getPaymentList</span><span class="o">(</span><span class="n">options</span><span class="o">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-python-payment-list">
+<span id="id15"></span><h3>Python Example<a class="headerlink" href="chapter4_payment.html#code-python-payment-list" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># construct source wallet</span>
+<span class="n">wallet1</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">(</span><span class="s2">&quot;shVC2gdG......gijqk4EsuqDF&quot;</span><span class="p">);</span>
+
+<span class="c1"># get one payment</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="n">getPayment</span><span class="p">(</span><span class="s1">&#39;D1B87A3E46792......730DA0564ACC7&#39;</span><span class="p">);</span>
+
+<span class="c1"># get payment history</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="n">getPaymentList</span><span class="p">();</span>
+
+<span class="c1"># query by options</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;destination_account&quot;</span><span class="p">:</span> <span class="s2">&quot;jp53tPyrQL......UXUDucnwVk&quot;</span><span class="p">,</span> <span class="s2">&quot;page&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="n">getPaymentList</span> <span class="p">(</span><span class="n">options</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-php-payment-list">
+<span id="id16"></span><h3>PHP Example<a class="headerlink" href="chapter4_payment.html#code-php-payment-list" title="永久链接至标题">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">// construct source wallet</span>
+<span class="x">$wallet1 = new Wallet(&#39;snwjtucx9......MbVz8hFiK9&#39;);</span>
+
+<span class="x">// get one payment</span>
+<span class="x">$res = $wallet1-&gt;getPayment(&#39;D1B87A3E46792......730DA0564ACC7&#39;);</span>
+
+<span class="x">// get payment history</span>
+<span class="x">$res = $wallet1-&gt;getPaymentList();</span>
+
+<span class="x">// query by options</span>
+<span class="x">$options[&#39;source_account&#39;] = &quot;jp53tPyrQL......UXUDucnwVk&quot;;</span>
+<span class="x">$options[&#39;results_per_page&#39;] = 15;</span>
+<span class="x">$options[&#39;page&#39;] = 1;</span>
+<span class="x">$res = $wallet1-&gt;getPaymentList($options);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-nodejs-payment-list">
+<span id="id17"></span><h3>Node.JS Example<a class="headerlink" href="chapter4_payment.html#code-nodejs-payment-list" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">).</span><span class="nx">Wallet</span><span class="p">;</span>
+<span class="c1">// construct source wallet</span>
+<span class="nx">$wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">(</span><span class="s1">&#39;snwjtucx9......MbVz8hFiK9&#39;</span><span class="p">);</span>
+
+<span class="c1">// get one payment</span>
+<span class="kd">var</span> <span class="nx">hash_id</span> <span class="o">=</span> <span class="s1">&#39;D1B87A3E46792......730DA0564ACC7&#39;</span><span class="p">;</span>
+<span class="nx">wallet1</span><span class="p">.</span><span class="nx">getPayment</span><span class="p">(</span><span class="nx">hash_id</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// get payment history</span>
+<span class="nx">wallet1</span><span class="p">.</span><span class="nx">getPaymentList</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// query by options</span>
+<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">source_account</span><span class="o">:</span><span class="s1">&#39;jp53tPyrQL......UXUDucnwVk&#39;</span><span class="p">,</span>
+    <span class="nx">destination_account</span><span class="o">:</span><span class="s1">&#39;j4PqT7......T8jrXgBhm1L4BpW&#39;</span><span class="p">,</span>
+    <span class="nx">results_per_page</span><span class="o">:</span><span class="mi">2</span>
+<span class="p">};</span>
+<span class="nx">wallet1</span><span class="p">.</span><span class="nx">getPaymentList</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chapter7_relation.html" class="btn btn-neutral float-right" title="关系类交易" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chapter3_fingate.html" class="btn btn-neutral" title="银关类交易" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Jintum Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

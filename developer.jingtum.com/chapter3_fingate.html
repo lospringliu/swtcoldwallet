@@ -1,0 +1,592 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>银关类交易 &mdash; Jingtum 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="Jingtum 1.0.0 文档" href="index.html"/>
+        <link rel="next" title="支付类交易" href="chapter4_payment.html"/>
+        <link rel="prev" title="账号类交易" href="chapter2_account.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jingtum
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">文档内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chapter1_start.html">接入流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_concepts.html">基本概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_modes.html">交易模式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2_account.html">账号类交易</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="chapter3_fingate.html#">银关类交易</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter3_fingate.html#id2">发行用户通</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#java-example">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#python-example">Python Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#php-example">PHP Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#node-js-example">Node.JS Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3_fingate.html#id3">查询发行状态</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#code-java-query-issue">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#code-python-query-issue">Python Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#code-php-query-issue">PHP Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#code-nodejs-query-issue">Node.JS Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3_fingate.html#id8">查询用户通状态</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#code-java-query-tum">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#code-python-query-tum">Python Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#code-php-query-tum">PHP Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#code-nodejs-query-tum">Node.JS Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3_fingate.html#id13">查询市场深度</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#code-java-orderbook">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#code-python-orderbook">Python Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#code-php-orderbook">PHP Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3_fingate.html#code-nodejs-orderbook">Node.JS Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4_payment.html">支付类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter7_relation.html">关系类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter5_offer.html">挂单类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6_transaction.html">记录类信息</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api2_doc.html">API说明</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk_java.html">Java SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_python.html">Python SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_php.html">PHP SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_nodejs.html">Node.JS SDK</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Jingtum</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>银关类交易</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>银关类交易<a class="headerlink" href="chapter3_fingate.html#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>发行用户通<a class="headerlink" href="chapter3_fingate.html#id2" title="永久链接至标题">¶</a></h2>
+<p>商户在井通银关可以申请一个银关账号用于发行用户通。经过申请和批准后，井通公司会分配商户一个井通区块链银关账号，
+包含有一组商户编号(custom ID)和商户密钥（custom key），可发行相应的用户通给其用户。发行用户通的总额度和有效期
+由商户和井通银关之间协定。商户发行的用户通总数量不得超过总额度，而且用户通仅在有效期内可以在井通区块链上流通。
+用户通的发行情况可以在井通银关的商户界面中查询到。</p>
+<p>详细商户申请和使用信息可参考井通银关网站（<a class="reference external" href="https://fingate.jingtum.com/#/info/questions">https://fingate.jingtum.com/#/info/questions</a>)
+或测试银关网站（<a class="reference external" href="https://tfingate.jingtum.com/#/info/questions">https://tfingate.jingtum.com/#/info/questions</a>)。 发行通没有异步模式。</p>
+<ul class="simple">
+<li><a class="reference internal" href="chapter3_fingate.html#code-java-issue"><span class="std std-ref">Java Example</span></a></li>
+<li><a class="reference internal" href="chapter3_fingate.html#code-python-issue"><span class="std std-ref">Python Example</span></a></li>
+<li><a class="reference internal" href="chapter3_fingate.html#code-php-issue"><span class="std std-ref">PHP Example</span></a></li>
+<li><a class="reference internal" href="chapter3_fingate.html#code-nodejs-issue"><span class="std std-ref">Node.JS Example</span></a></li>
+</ul>
+<div class="section" id="java-example">
+<span id="code-java-issue"></span><h3>Java Example<a class="headerlink" href="chapter3_fingate.html#java-example" title="永久链接至标题">¶</a></h3>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// get fingate instance</span>
+<span class="n">FinGate</span> <span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+<span class="c1">// set development mode(optional)</span>
+<span class="n">fingate</span><span class="o">.</span><span class="na">setMode</span><span class="o">(</span><span class="n">FinGate</span><span class="o">.</span><span class="na">DEVLOPMENT</span><span class="o">);</span>
+
+<span class="c1">// set fingate custom parameters</span>
+<span class="n">fingate</span><span class="o">.</span><span class="na">setToken</span><span class="o">(</span><span class="s">&quot;00000008&quot;</span><span class="o">);</span>
+<span class="n">fingate</span><span class="o">.</span><span class="na">setKey</span><span class="o">(</span><span class="s">&quot;5361ef......458f37b&quot;</span><span class="o">);</span>
+
+<span class="c1">// construct receive wallet</span>
+<span class="n">Wallet</span> <span class="n">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Wallet</span><span class="o">(</span><span class="s">&quot;snqFcHzRe2......QYzxEEbW&quot;</span><span class="o">);</span>
+
+<span class="c1">// issue custom tum to wallet above</span>
+<span class="kt">boolean</span> <span class="n">isSuccessful</span> <span class="o">=</span> <span class="n">fingate</span><span class="o">.</span><span class="na">issueCustomTum</span><span class="o">(</span><span class="s">&quot;810000000......201800220020000001&quot;</span><span class="o">,</span>
+<span class="mi">1000</span><span class="o">,</span> <span class="n">wallet1</span><span class="o">.</span><span class="na">getAddress</span><span class="o">());</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-example">
+<span id="code-python-issue"></span><h3>Python Example<a class="headerlink" href="chapter3_fingate.html#python-example" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># get fingate instance</span>
+<span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="p">();</span>
+<span class="c1"># set development mode(optional)</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setMode</span><span class="p">(</span><span class="n">FinGate</span><span class="o">.</span><span class="n">DEVLOPMENT</span><span class="p">);</span>
+
+<span class="c1"># set fingate custom parameters</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setToken</span><span class="p">(</span><span class="s2">&quot;00000008&quot;</span><span class="p">);</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setKey</span><span class="p">(</span><span class="s2">&quot;5361ef......458f37b&quot;</span><span class="p">);</span>
+
+<span class="c1"># construct receive wallet</span>
+<span class="n">my_wallet</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">(</span><span class="s2">&quot;shVC2gdG......gijqk4EsuqDF&quot;</span><span class="p">);</span>
+
+<span class="c1"># issue custom tum to wallet above</span>
+<span class="n">ret</span> <span class="o">=</span> <span class="n">fingate</span><span class="o">.</span><span class="n">issueCustomTum</span><span class="p">(</span><span class="s2">&quot;820000000800002......0000001&quot;</span><span class="p">,</span> <span class="s2">&quot;123.45&quot;</span><span class="p">,</span> <span class="n">my_wallet</span><span class="o">.</span><span class="n">getAddress</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="php-example">
+<span id="code-php-issue"></span><h3>PHP Example<a class="headerlink" href="chapter3_fingate.html#php-example" title="永久链接至标题">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">// get fingate instance</span>
+<span class="x">$fingate = FinGate::getInstance();</span>
+<span class="x">// set development mode(optional)</span>
+<span class="x">$fingate-&gt;setMode($FinGate-&gt;modes::DEVLOPMENT);</span>
+
+<span class="x">// set fingate custom parameters</span>
+<span class="x">$fingate-&gt;setToken(&quot;00000008&quot;);</span>
+<span class="x">$fingate-&gt;setKey(&quot;5361ef......458f37b&quot;);</span>
+
+<span class="x">// construct receive wallet</span>
+<span class="x">$my_wallet = new Wallet(&quot;snqFcH......pQYzxEEbW&quot;);</span>
+
+<span class="x">// issue custom tum to wallet above</span>
+<span class="x">$res = $fingate-&gt;issueCustomTum(&#39;820000000800002......0000001&#39;, 1119.16, $my_wallet-&gt;getAddress());</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="node-js-example">
+<span id="code-nodejs-issue"></span><h3>Node.JS Example<a class="headerlink" href="chapter3_fingate.html#node-js-example" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// get fingate instance</span>
+<span class="kd">var</span> <span class="nx">fingate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">).</span><span class="nx">FinGate</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">).</span><span class="nx">Wallet</span><span class="p">;</span>
+<span class="c1">// set fingate account</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setAccount</span><span class="p">(</span><span class="s2">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="p">);</span>
+<span class="c1">// set development mode(optional)</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setMode</span><span class="p">(</span><span class="nx">FinGate</span><span class="p">.</span><span class="nx">DEVLOPMENT</span><span class="p">);</span>
+
+<span class="c1">// set fingate custom parameters</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setToken</span><span class="p">(</span><span class="s1">&#39;00000008&#39;</span><span class="p">);</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setKey</span><span class="p">(</span><span class="s1">&#39;5361ef......458f37b&#39;</span><span class="p">);</span>
+
+<span class="c1">// construct receive wallet</span>
+<span class="kd">var</span> <span class="nx">my_wallet</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">(</span><span class="s1">&#39;shNKNxg......AKBFy5W5kK&#39;</span><span class="p">);</span>
+
+<span class="c1">// issue custom tum to wallet above</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">issueCustomTum</span><span class="p">(</span><span class="s1">&#39;820000000800002......0000001&#39;</span><span class="p">,</span> <span class="s1">&#39;10000.05&#39;</span><span class="p">,</span> <span class="nx">my_wallet</span><span class="p">.</span><span class="nx">getAddress</span><span class="p">(),</span>
+    <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//process result</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>查询发行状态<a class="headerlink" href="chapter3_fingate.html#id3" title="永久链接至标题">¶</a></h2>
+<p>当银关提交用户通发行命令后，可通过用户通发行时使用的客户端流水号（UUID）来查询用户通发行的状态。
+返回的用户通的发行状态包括用户通的发行数量，时间，在区块链上的交易哈希值（HASH）和发行状态。</p>
+<ul class="simple">
+<li><a class="reference internal" href="chapter3_fingate.html#code-java-query-issue"><span class="std std-ref">Java Example</span></a></li>
+<li><a class="reference internal" href="chapter3_fingate.html#code-python-query-issue"><span class="std std-ref">Python Example</span></a></li>
+<li><a class="reference internal" href="chapter3_fingate.html#code-php-query-issue"><span class="std std-ref">PHP Example</span></a></li>
+<li><a class="reference internal" href="chapter3_fingate.html#code-nodejs-query-issue"><span class="std std-ref">Node.JS Example</span></a></li>
+</ul>
+<div class="section" id="code-java-query-issue">
+<span id="id4"></span><h3>Java Example<a class="headerlink" href="chapter3_fingate.html#code-java-query-issue" title="永久链接至标题">¶</a></h3>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// get fingate instance</span>
+<span class="n">FinGate</span> <span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+<span class="c1">// set development mode(optional)</span>
+<span class="n">fingate</span><span class="o">.</span><span class="na">setMode</span><span class="o">(</span><span class="n">FinGate</span><span class="o">.</span><span class="na">DEVLOPMENT</span><span class="o">);</span>
+
+<span class="c1">// set fingate custom parameters</span>
+<span class="n">fingate</span><span class="o">.</span><span class="na">setToken</span><span class="o">(</span><span class="s">&quot;00000008&quot;</span><span class="o">);</span>
+<span class="n">fingate</span><span class="o">.</span><span class="na">setKey</span><span class="o">(</span><span class="s">&quot;5361ef......458f37b&quot;</span><span class="o">);</span>
+
+<span class="c1">// query issue status by query order</span>
+<span class="n">IssueRecord</span> <span class="n">ir</span> <span class="o">=</span> <span class="n">fingate</span><span class="o">.</span><span class="na">queryIssue</span><span class="o">(</span><span class="s">&quot;PREFIX67936661125163618000001&quot;</span><span class="o">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-python-query-issue">
+<span id="id5"></span><h3>Python Example<a class="headerlink" href="chapter3_fingate.html#code-python-query-issue" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># get fingate instance</span>
+<span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="p">();</span>
+<span class="c1"># set development mode(optional)</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setMode</span><span class="p">(</span><span class="n">FinGate</span><span class="o">.</span><span class="n">DEVLOPMENT</span><span class="p">);</span>
+
+<span class="c1"># set fingate custom parameters</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setToken</span><span class="p">(</span><span class="s2">&quot;00000008&quot;</span><span class="p">);</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setKey</span><span class="p">(</span><span class="s2">&quot;5361ef......458f37b&quot;</span><span class="p">);</span>
+
+<span class="c1"># query issue status by query order</span>
+<span class="n">ir</span> <span class="o">=</span> <span class="n">fingate</span><span class="o">.</span><span class="n">queryIssue</span><span class="p">(</span><span class="s2">&quot;PREFIX67936661125163618000001&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-php-query-issue">
+<span id="id6"></span><h3>PHP Example<a class="headerlink" href="chapter3_fingate.html#code-php-query-issue" title="永久链接至标题">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">// get fingate instance</span>
+<span class="x">$fingate = FinGate::getInstance();</span>
+<span class="x">// set development mode(optional)</span>
+<span class="x">$fingate-&gt;setMode($FinGate-&gt;modes::DEVLOPMENT);</span>
+
+<span class="x">// set fingate custom parameters</span>
+<span class="x">$fingate-&gt;setToken(&quot;00000008&quot;);</span>
+<span class="x">$fingate-&gt;setKey(&quot;5361ef......458f37b&quot;);</span>
+
+<span class="x">// query issue status by query order</span>
+<span class="x">$res = $fingate-&gt;queryIssue(&quot;PREFIX67936661125163618000001&quot;);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-nodejs-query-issue">
+<span id="id7"></span><h3>Node.JS Example<a class="headerlink" href="chapter3_fingate.html#code-nodejs-query-issue" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// get fingate instance</span>
+<span class="kd">var</span> <span class="nx">fingate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">).</span><span class="nx">FinGate</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">).</span><span class="nx">Wallet</span><span class="p">;</span>
+<span class="c1">// set fingate account</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setAccount</span><span class="p">(</span><span class="s2">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="p">);</span>
+<span class="c1">// set development mode(optional)</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setMode</span><span class="p">(</span><span class="nx">FinGate</span><span class="p">.</span><span class="nx">DEVLOPMENT</span><span class="p">);</span>
+
+<span class="c1">// set fingate custom parameters</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setToken</span><span class="p">(</span><span class="s1">&#39;00000008&#39;</span><span class="p">);</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setKey</span><span class="p">(</span><span class="s1">&#39;5361ef......458f37b&#39;</span><span class="p">);</span>
+
+<span class="c1">// query issue status by query order</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">queryIssue</span><span class="p">({</span><span class="s1">&#39;order&#39;</span><span class="o">:</span><span class="s1">&#39;PREFIX67936620161125163618000001&#39;</span><span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//process result</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>查询用户通状态<a class="headerlink" href="chapter3_fingate.html#id8" title="永久链接至标题">¶</a></h2>
+<p>银关可通过用户通的代码查询已经发行的用户通状态。
+当前用户通的状态包括用户通的名称，总额度，已经发行的数量，用户通的类型和面值，以及用户通的有效起始和结束时间等信息。</p>
+<ul class="simple">
+<li><a class="reference internal" href="chapter3_fingate.html#code-java-query-tum"><span class="std std-ref">Java Example</span></a></li>
+<li><a class="reference internal" href="chapter3_fingate.html#code-python-query-tum"><span class="std std-ref">Python Example</span></a></li>
+<li><a class="reference internal" href="chapter3_fingate.html#code-php-query-tum"><span class="std std-ref">PHP Example</span></a></li>
+<li><a class="reference internal" href="chapter3_fingate.html#code-nodejs-query-tum"><span class="std std-ref">Node.JS Example</span></a></li>
+</ul>
+<div class="section" id="code-java-query-tum">
+<span id="id9"></span><h3>Java Example<a class="headerlink" href="chapter3_fingate.html#code-java-query-tum" title="永久链接至标题">¶</a></h3>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// get fingate instance</span>
+<span class="n">FinGate</span> <span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+<span class="c1">// set development mode(optional)</span>
+<span class="n">fingate</span><span class="o">.</span><span class="na">setMode</span><span class="o">(</span><span class="n">FinGate</span><span class="o">.</span><span class="na">DEVLOPMENT</span><span class="o">);</span>
+
+<span class="c1">// set fingate custom parameters</span>
+<span class="n">fingate</span><span class="o">.</span><span class="na">setToken</span><span class="o">(</span><span class="s">&quot;00000008&quot;</span><span class="o">);</span>
+<span class="n">fingate</span><span class="o">.</span><span class="na">setKey</span><span class="o">(</span><span class="s">&quot;5361ef......458f37b&quot;</span><span class="o">);</span>
+
+<span class="c1">// get tum status</span>
+<span class="n">TumInfo</span> <span class="n">ti</span> <span class="o">=</span> <span class="n">fingate</span><span class="o">.</span><span class="na">queryCustomTum</span><span class="o">(</span><span class="s">&quot;8300000027000020160415201704150120000003&quot;</span><span class="o">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-python-query-tum">
+<span id="id10"></span><h3>Python Example<a class="headerlink" href="chapter3_fingate.html#code-python-query-tum" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># get fingate instance</span>
+<span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="p">();</span>
+<span class="c1"># set development mode(optional)</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setMode</span><span class="p">(</span><span class="n">FinGate</span><span class="o">.</span><span class="n">DEVLOPMENT</span><span class="p">);</span>
+
+<span class="c1"># set fingate custom parameters</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setToken</span><span class="p">(</span><span class="s2">&quot;00000008&quot;</span><span class="p">);</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setKey</span><span class="p">(</span><span class="s2">&quot;5361ef......458f37b&quot;</span><span class="p">);</span>
+
+<span class="c1"># get tum status</span>
+<span class="n">ret</span> <span class="o">=</span> <span class="n">fingate</span><span class="o">.</span><span class="n">queryCustomTum</span><span class="p">(</span><span class="s2">&quot;8300000027000020160415201704150120000003&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-php-query-tum">
+<span id="id11"></span><h3>PHP Example<a class="headerlink" href="chapter3_fingate.html#code-php-query-tum" title="永久链接至标题">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">// get fingate instance</span>
+<span class="x">$fingate = FinGate::getInstance();</span>
+<span class="x">// set development mode(optional)</span>
+<span class="x">$fingate-&gt;setMode($FinGate-&gt;modes::DEVLOPMENT);</span>
+
+<span class="x">// set fingate custom parameters</span>
+<span class="x">$fingate-&gt;setToken(&quot;00000008&quot;);</span>
+<span class="x">$fingate-&gt;setKey(&quot;5361ef......458f37b&quot;);</span>
+
+<span class="x">// get tum status</span>
+<span class="x">$res = $fingate-&gt;queryCustomTum(&quot;8300000027000020160415201704150120000003&quot;);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-nodejs-query-tum">
+<span id="id12"></span><h3>Node.JS Example<a class="headerlink" href="chapter3_fingate.html#code-nodejs-query-tum" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// get fingate instance</span>
+<span class="kd">var</span> <span class="nx">fingate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">).</span><span class="nx">FinGate</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">).</span><span class="nx">Wallet</span><span class="p">;</span>
+<span class="c1">// set fingate account</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setAccount</span><span class="p">(</span><span class="s2">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="p">);</span>
+<span class="c1">// set development mode(optional)</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setMode</span><span class="p">(</span><span class="nx">FinGate</span><span class="p">.</span><span class="nx">DEVLOPMENT</span><span class="p">);</span>
+
+<span class="c1">// set fingate custom parameters</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setToken</span><span class="p">(</span><span class="s1">&#39;00000008&#39;</span><span class="p">);</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setKey</span><span class="p">(</span><span class="s1">&#39;5361ef......458f37b&#39;</span><span class="p">);</span>
+
+<span class="c1">// get tum status</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">queryCustomTum</span><span class="p">(</span><span class="s1">&#39;820000000......0000001&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//process result</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>查询市场深度<a class="headerlink" href="chapter3_fingate.html#id13" title="永久链接至标题">¶</a></h2>
+<p>市场深度是市场里面对于某个货币对的所有挂单，通过市场深度功能，可以获得卖单和买单列表的结果。</p>
+<ul class="simple">
+<li><a class="reference internal" href="chapter3_fingate.html#code-java-orderbook"><span class="std std-ref">Java Example</span></a></li>
+<li><a class="reference internal" href="chapter3_fingate.html#code-python-orderbook"><span class="std std-ref">Python Example</span></a></li>
+<li><a class="reference internal" href="chapter3_fingate.html#code-php-orderbook"><span class="std std-ref">PHP Example</span></a></li>
+<li><a class="reference internal" href="chapter3_fingate.html#code-nodejs-orderbook"><span class="std std-ref">Node.JS Example</span></a></li>
+</ul>
+<div class="section" id="code-java-orderbook">
+<span id="id14"></span><h3>Java Example<a class="headerlink" href="chapter3_fingate.html#code-java-orderbook" title="永久链接至标题">¶</a></h3>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// get fingate instance</span>
+<span class="n">FinGate</span> <span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+<span class="c1">// set development mode(optional)</span>
+<span class="n">fingate</span><span class="o">.</span><span class="na">setMode</span><span class="o">(</span><span class="n">FinGate</span><span class="o">.</span><span class="na">DEVLOPMENT</span><span class="o">);</span>
+
+<span class="c1">// set order book pair</span>
+<span class="n">String</span> <span class="n">pair</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">&quot;CNY:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/USD:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;</span><span class="o">);</span>
+
+<span class="c1">// get order book</span>
+<span class="n">finGate</span><span class="o">.</span><span class="na">getOrderBook</span><span class="o">(</span><span class="n">pair</span><span class="o">,</span> <span class="k">new</span> <span class="n">OrderBookListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onComplete</span><span class="o">(</span><span class="n">result</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// process result</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-python-orderbook">
+<span id="id15"></span><h3>Python Example<a class="headerlink" href="chapter3_fingate.html#code-python-orderbook" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># get fingate instance</span>
+<span class="n">fingate</span> <span class="o">=</span> <span class="n">FinGate</span><span class="p">();</span>
+<span class="c1"># set development mode(optional)</span>
+<span class="n">fingate</span><span class="o">.</span><span class="n">setMode</span><span class="p">(</span><span class="n">FinGate</span><span class="o">.</span><span class="n">DEVLOPMENT</span><span class="p">);</span>
+
+<span class="c1"># set order book pair</span>
+<span class="n">pair</span> <span class="o">=</span> <span class="s2">&quot;CNY:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/USD:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;</span><span class="p">;</span>
+
+<span class="c1"># get order book</span>
+<span class="n">finGate</span><span class="o">.</span><span class="n">getOrderBook</span><span class="p">(</span><span class="n">pair</span><span class="p">,</span> <span class="n">callback</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-php-orderbook">
+<span id="id16"></span><h3>PHP Example<a class="headerlink" href="chapter3_fingate.html#code-php-orderbook" title="永久链接至标题">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">// get fingate instance</span>
+<span class="x">$fingate = FinGate::getInstance();</span>
+<span class="x">// set development mode(optional)</span>
+<span class="x">$fingate-&gt;setMode($FinGate-&gt;modes::DEVLOPMENT);</span>
+
+<span class="x">// set order book pair</span>
+<span class="x">$pair = &quot;CNY:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/USD:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;;</span>
+
+<span class="x">// get order book</span>
+<span class="x">$finGate-&gt;getOrderBook(pair, $callback);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-nodejs-orderbook">
+<span id="id17"></span><h3>Node.JS Example<a class="headerlink" href="chapter3_fingate.html#code-nodejs-orderbook" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// get fingate instance</span>
+<span class="kd">var</span> <span class="nx">fingate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">).</span><span class="nx">FinGate</span><span class="p">;</span>
+<span class="c1">// set fingate account</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setAccount</span><span class="p">(</span><span class="s2">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="p">);</span>
+<span class="c1">// set development mode(optional)</span>
+<span class="nx">fingate</span><span class="p">.</span><span class="nx">setMode</span><span class="p">(</span><span class="nx">FinGate</span><span class="p">.</span><span class="nx">DEVLOPMENT</span><span class="p">);</span>
+
+<span class="c1">// set order book pair</span>
+<span class="kd">var</span> <span class="nx">pair</span> <span class="o">=</span> <span class="s1">&#39;CNY:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/USD:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&#39;</span><span class="p">;</span>
+
+<span class="c1">// get order book</span>
+<span class="nx">finGate</span><span class="p">.</span><span class="nx">getOrderBook</span><span class="p">(</span><span class="nx">pair</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// process result</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chapter4_payment.html" class="btn btn-neutral float-right" title="支付类交易" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chapter2_account.html" class="btn btn-neutral" title="账号类交易" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Jintum Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

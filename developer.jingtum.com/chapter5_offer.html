@@ -1,0 +1,579 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>挂单类交易 &mdash; Jingtum 1.0.0 文档</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="genindex.html"/>
+        <link rel="search" title="搜索" href="search.html"/>
+    <link rel="top" title="Jingtum 1.0.0 文档" href="index.html"/>
+        <link rel="next" title="记录类信息" href="chapter6_transaction.html"/>
+        <link rel="prev" title="关系类交易" href="chapter7_relation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jingtum
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">文档内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chapter1_start.html">接入流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_concepts.html">基本概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1_modes.html">交易模式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2_account.html">账号类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3_fingate.html">银关类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4_payment.html">支付类交易</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter7_relation.html">关系类交易</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="chapter5_offer.html#">挂单类交易</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter5_offer.html#id2">提交挂单</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#java-example">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#python-example">Python Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#php-example">PHP Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#node-js-example">Node.JS Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter5_offer.html#id3">取消挂单</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#code-java-cancel-offer">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#code-python-cancel-offer">Python Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#code-php-cancel-offer">PHP Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#code-nodejs-cancel-offer">Node.JS Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter5_offer.html#id8">查询挂单信息</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#code-java-get-offer">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#code-python-get-offer">Python Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#code-php-get-offer">PHP Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#code-nodejs-get-offer">Node.JS Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter5_offer.html#id13">查询市场深度</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#code-java-get-orderbook">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#code-python-get-orderbook">Python Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#code-php-get-orderbook">PHP Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter5_offer.html#code-nodejs-get-orderbook">Node.JS Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6_transaction.html">记录类信息</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api2_doc.html">API说明</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SDK</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdk_java.html">Java SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_python.html">Python SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_php.html">PHP SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk_nodejs.html">Node.JS SDK</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Jingtum</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>挂单类交易</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>挂单类交易<a class="headerlink" href="chapter5_offer.html#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>提交挂单<a class="headerlink" href="chapter5_offer.html#id2" title="永久链接至标题">¶</a></h2>
+<p>挂单是用户资产交换的意愿表达，用于用一种资产置换另一种资产。在挂单中，需要标明挂单的资产对，例如AAA/BBB，其中AAA为基准资产，BBB为目标资产，基准资产是用户挂单的操作资产，目标资产是用户挂单的被动资产。</p>
+<p>用户在挂单的时候，需要表达挂单的类型，分别是买单或者卖单，挂单类型指的是对基准货币的操作，例如买单AAA/BBB，
+表示买AAA；卖单AAA/BBB，表示卖AAA。</p>
+<p>用户挂单之后，系统根据用户的挂单信息，自动撮合用户的挂单。如果不能立即成交则用户的单子，用户的挂单处于未成交状态。</p>
+<ul class="simple">
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-java-offer"><span class="std std-ref">Java Example</span></a></li>
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-python-offer"><span class="std std-ref">Python Example</span></a></li>
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-php-offer"><span class="std std-ref">PHP Example</span></a></li>
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-nodejs-offer"><span class="std std-ref">Node.JS Example</span></a></li>
+</ul>
+<div class="section" id="java-example">
+<span id="code-java-offer"></span><h3>Java Example<a class="headerlink" href="chapter5_offer.html#java-example" title="永久链接至标题">¶</a></h3>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="n">Wallet</span> <span class="n">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Wallet</span><span class="o">(</span><span class="s">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="o">);</span>
+
+<span class="c1">// create offer operation</span>
+<span class="n">OrderOperation</span> <span class="n">op</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OrderOperation</span><span class="o">(</span><span class="n">wallet1</span><span class="o">);</span>
+<span class="n">op</span><span class="o">.</span><span class="na">setType</span><span class="o">(</span><span class="n">Order</span><span class="o">.</span><span class="na">SELL</span><span class="o">);</span>
+<span class="n">op</span><span class="o">.</span><span class="na">setPair</span><span class="o">(</span><span class="s">&quot;SWT/CNY:janxMdr...GewMMeHa9f&quot;</span><span class="o">);</span>
+<span class="n">op</span><span class="o">.</span><span class="na">setAmount</span><span class="o">(</span><span class="mf">1000.00</span><span class="o">);</span>
+<span class="n">op</span><span class="o">.</span><span class="na">setPrice</span><span class="o">(</span><span class="mf">0.0005</span><span class="o">);</span>
+<span class="n">op</span><span class="o">.</span><span class="na">setValidate</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+
+<span class="c1">// submit offer</span>
+<span class="n">op</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">OfferListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onComplete</span><span class="o">(</span><span class="n">result</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// process result</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-example">
+<span id="code-python-offer"></span><h3>Python Example<a class="headerlink" href="chapter5_offer.html#python-example" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># construct source wallet</span>
+<span class="n">wallet1</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">(</span><span class="s2">&quot;shVC2gdG......gijqk4EsuqDF&quot;</span><span class="p">);</span>
+
+<span class="c1"># create offer operation</span>
+<span class="n">op</span> <span class="o">=</span> <span class="n">OrderOperation</span><span class="p">(</span><span class="n">wallet1</span><span class="p">);</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setType</span><span class="p">(</span><span class="n">Order</span><span class="o">.</span><span class="n">SELL</span><span class="p">);</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setPair</span><span class="p">(</span><span class="s2">&quot;SWT/CNY:janxMdr...GewMMeHa9f&quot;</span><span class="p">);</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setAmount</span><span class="p">(</span><span class="mf">1000.00</span><span class="p">);</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setPrice</span><span class="p">(</span><span class="mf">0.0005</span><span class="p">);</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setValidate</span><span class="p">(</span><span class="n">true</span><span class="p">);</span>
+
+<span class="c1"># submit payment</span>
+<span class="n">op</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">callback</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="php-example">
+<span id="code-php-offer"></span><h3>PHP Example<a class="headerlink" href="chapter5_offer.html#php-example" title="永久链接至标题">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">// construct source wallet</span>
+<span class="x">$wallet1 = new Wallet(&#39;snwjtucx9......MbVz8hFiK9&#39;);</span>
+
+<span class="x">// create offer operation</span>
+<span class="x">$op = new OrderOperation($wallet1);</span>
+<span class="x">$op-&gt;setType($op-&gt;SELL)</span>
+<span class="x">$op-&gt;setPair(&quot;SWT/CNY:janxMdr...GewMMeHa9f&quot;);</span>
+<span class="x">$op-&gt;setAmount(1000.00);</span>
+<span class="x">$op-&gt;setPrice(0.0005);</span>
+<span class="x">// sync mode</span>
+<span class="x">$op-&gt;setValidate(true);</span>
+
+<span class="x">// submit payment</span>
+<span class="x">$res = $op-&gt;submit();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="node-js-example">
+<span id="code-nodejs-offer"></span><h3>Node.JS Example<a class="headerlink" href="chapter5_offer.html#node-js-example" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="kd">var</span> <span class="nx">JingtumSDK</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">(</span><span class="s1">&#39;shNK......y5W5kK&#39;</span><span class="p">);</span>
+
+<span class="c1">// create offer operation</span>
+<span class="kd">var</span> <span class="nx">op</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">OrderOperation</span><span class="p">(</span><span class="nx">wallet1</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setType</span><span class="p">(</span><span class="nx">op</span><span class="p">.</span><span class="nx">SELL</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setPair</span><span class="p">(</span><span class="s2">&quot;SWT/CNY:janxMdr...GewMMeHa9f&quot;</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setAmount</span><span class="p">(</span><span class="mf">1000.00</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setPrice</span><span class="p">(</span><span class="mf">0.0005</span><span class="p">);</span>
+<span class="c1">// sync mode</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setValidate</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// submit payment</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>取消挂单<a class="headerlink" href="chapter5_offer.html#id3" title="永久链接至标题">¶</a></h2>
+<p>当井通账号提交挂单后，在挂单未完全成交前，账号可以取消未完成的挂单。取消的依据是未完成的单子的序号，
+在提交挂单时由系统返回的一个大于零的整数值。每个账号做的每笔交易都有个序号，只有挂单交易的序号用于操作。</p>
+<ul class="simple">
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-java-cancel-offer"><span class="std std-ref">Java Example</span></a></li>
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-python-cancel-offer"><span class="std std-ref">Python Example</span></a></li>
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-php-cancel-offer"><span class="std std-ref">PHP Example</span></a></li>
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-nodejs-cancel-offer"><span class="std std-ref">Node.JS Example</span></a></li>
+</ul>
+<div class="section" id="code-java-cancel-offer">
+<span id="id4"></span><h3>Java Example<a class="headerlink" href="chapter5_offer.html#code-java-cancel-offer" title="永久链接至标题">¶</a></h3>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="n">Wallet</span> <span class="n">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Wallet</span><span class="o">(</span><span class="s">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="o">);</span>
+
+<span class="c1">// create offer cancel operation</span>
+<span class="n">CancelOrderOperation</span> <span class="n">op</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CancelOrderOperation</span><span class="o">(</span><span class="n">wallet1</span><span class="o">);</span>
+<span class="n">op</span><span class="o">.</span><span class="na">setSequence</span><span class="o">(</span><span class="mi">54</span><span class="o">);</span>
+<span class="n">op</span><span class="o">.</span><span class="na">setValidate</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+
+<span class="c1">// submit offer cancel</span>
+<span class="n">op</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span><span class="k">new</span> <span class="n">OfferCancelListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onComplete</span><span class="o">(</span><span class="n">result</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// process result</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-python-cancel-offer">
+<span id="id5"></span><h3>Python Example<a class="headerlink" href="chapter5_offer.html#code-python-cancel-offer" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># construct source wallet</span>
+<span class="n">wallet1</span> <span class="o">=</span> <span class="n">Wallet</span><span class="p">(</span><span class="s2">&quot;shVC2gdG......gijqk4EsuqDF&quot;</span><span class="p">);</span>
+
+<span class="c1"># create offer cancel operation</span>
+<span class="n">op</span> <span class="o">=</span> <span class="n">CancelOrderOperation</span><span class="p">(</span><span class="n">wallet1</span><span class="p">);</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setSequence</span><span class="p">(</span><span class="mi">54</span><span class="p">);</span>
+<span class="n">op</span><span class="o">.</span><span class="n">setValidate</span><span class="p">(</span><span class="n">true</span><span class="p">);</span>
+
+<span class="c1"># submit offer cancel</span>
+<span class="n">op</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">callback</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-php-cancel-offer">
+<span id="id6"></span><h3>PHP Example<a class="headerlink" href="chapter5_offer.html#code-php-cancel-offer" title="永久链接至标题">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">// construct source wallet</span>
+<span class="x">$wallet1 = new Wallet(&#39;snwjtucx9......MbVz8hFiK9&#39;);</span>
+
+<span class="x">// create offer cancel operation</span>
+<span class="x">$op = new CancelOrderOperation($wallet);</span>
+<span class="x">$op-&gt;setSequence(54);</span>
+<span class="x">$op-&gt;setValidate(true);</span>
+
+<span class="x">// submit offer cancel</span>
+<span class="x">$ret = $op-&gt;submit();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-nodejs-cancel-offer">
+<span id="id7"></span><h3>Node.JS Example<a class="headerlink" href="chapter5_offer.html#code-nodejs-cancel-offer" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="kd">var</span> <span class="nx">JingtumSDK</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">(</span><span class="s1">&#39;shNK......y5W5kK&#39;</span><span class="p">);</span>
+
+<span class="c1">// create offer cancel operation</span>
+<span class="kd">var</span> <span class="nx">op</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JingtumSDK</span><span class="p">.</span><span class="nx">CancelOrderOperation</span><span class="p">(</span><span class="nx">wallet1</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setSequence</span><span class="p">(</span><span class="mi">54</span><span class="p">);</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">setValidate</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// submit offer cancel</span>
+<span class="nx">op</span><span class="p">.</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>查询挂单信息<a class="headerlink" href="chapter5_offer.html#id8" title="永久链接至标题">¶</a></h2>
+<p>当井通账号对所属资产挂单成功后，可以通过挂单返回的Hash值查询单个挂单信息。
+井通账号如果有多个挂单挂出，在挂单未成交时，也可以获得这些挂单的信息。
+如果挂单成交，则通过查询交易可以得知挂单成交的信息。</p>
+<p>此外，井通区块链系统中也可以查询某一对资产的挂单信息，比如使用用户通A置换用户通B。</p>
+<ul class="simple">
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-java-get-offer"><span class="std std-ref">Java Example</span></a></li>
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-python-get-offer"><span class="std std-ref">Python Example</span></a></li>
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-php-get-offer"><span class="std std-ref">PHP Example</span></a></li>
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-nodejs-get-offer"><span class="std std-ref">Node.JS Example</span></a></li>
+</ul>
+<div class="section" id="code-java-get-offer">
+<span id="id9"></span><h3>Java Example<a class="headerlink" href="chapter5_offer.html#code-java-get-offer" title="永久链接至标题">¶</a></h3>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="n">Wallet</span> <span class="n">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Wallet</span><span class="o">(</span><span class="s">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="o">);</span>
+
+<span class="c1">// get one offer info</span>
+<span class="n">Order</span> <span class="n">order</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="na">getOrder</span><span class="o">(</span><span class="s">&quot;52AED741BF.....FB2F14&quot;</span><span class="o">);</span>
+
+<span class="c1">// get all un-funded offers</span>
+<span class="n">OrderCollection</span> <span class="n">orders</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="na">getOrderList</span><span class="o">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-python-get-offer">
+<span id="id10"></span><h3>Python Example<a class="headerlink" href="chapter5_offer.html#code-python-get-offer" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># construct source wallet</span>
+<span class="n">Wallet</span> <span class="n">wallet1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Wallet</span><span class="p">(</span><span class="s2">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="p">);</span>
+
+<span class="c1"># get one offer info</span>
+<span class="n">order</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="n">getOrder</span><span class="p">(</span><span class="s1">&#39;52AED741BF.....FB2F14&#39;</span><span class="p">);</span>
+
+<span class="c1"># get all un-funded offers</span>
+<span class="n">orders</span> <span class="o">=</span> <span class="n">wallet1</span><span class="o">.</span><span class="n">getOrderList</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-php-get-offer">
+<span id="id11"></span><h3>PHP Example<a class="headerlink" href="chapter5_offer.html#code-php-get-offer" title="永久链接至标题">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">// construct source wallet</span>
+<span class="x">$wallet1 = new Wallet(&#39;jfCiWtSt4ju......NYxakm5yP9S&#39;,&#39;snwjtucx9......MbVz8hFiK9&#39;);</span>
+
+<span class="x">// get one offer info</span>
+<span class="x">$hash_id = &#39;52AED741BF.....FB2F14&#39;;</span>
+<span class="x">$ret = $wallet1-&gt;getOrder($hash_id);</span>
+
+<span class="x">// get all un-funded offers</span>
+<span class="x">$ret = $wallet1-&gt;getOrderList();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-nodejs-get-offer">
+<span id="id12"></span><h3>Node.JS Example<a class="headerlink" href="chapter5_offer.html#code-nodejs-get-offer" title="永久链接至标题">¶</a></h3>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="c1">// construct source wallet</span>
+<span class="kd">var</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jingtum-sdk&#39;</span><span class="p">).</span><span class="nx">Wallet</span><span class="p">;</span>
+<span class="nx">Wallet</span> <span class="nx">wallet1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">(</span><span class="s2">&quot;snqFcH......pQYzxEEbW&quot;</span><span class="p">);</span>
+
+<span class="c1">// get one offer info</span>
+<span class="nx">wallet1</span><span class="p">.</span><span class="nx">getOrder</span><span class="p">(</span><span class="s1">&#39;3E0E7444449A0656......69FBF67115FE20&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// get all un-funded offers</span>
+<span class="nx">wallet1</span><span class="p">.</span><span class="nx">getOrderList</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>查询市场深度<a class="headerlink" href="chapter5_offer.html#id13" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>市场深度是市场里面对于某个货币对的所有挂单，通过市场深度功能，可以获得卖单和买单列表的结果，结果中的信息字段如下：</dt>
+<dd><p class="first">pair，货币对
+bids，买单列表，列表里的每一项如下</p>
+<blockquote>
+<div>order_maker，挂单账号
+sequence，挂单序号
+funed，单子实际可成交的金额
+total，单子声明可成交的金额
+price，单子的价格</div></blockquote>
+<p class="last">asks，卖单列表，列表里的每一项和bids里面一样</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-java-get-orderbook"><span class="std std-ref">Java Example</span></a></li>
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-python-get-orderbook"><span class="std std-ref">Python Example</span></a></li>
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-php-get-orderbook"><span class="std std-ref">PHP Example</span></a></li>
+<li><a class="reference internal" href="http://developer.jingtum.com/offer_class_tx.html#code-nodejs-get-orderbook"><span class="std std-ref">Node.JS Example</span></a></li>
+</ul>
+<div class="section" id="code-java-get-orderbook">
+<span id="id14"></span><h3>Java Example<a class="headerlink" href="chapter5_offer.html#code-java-get-orderbook" title="永久链接至标题">¶</a></h3>
+<blockquote>
+<div><p>// 1. prepare a order book pair
+String pair = new String(&#8220;CNY:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/USD:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&#8221;);</p>
+<p>// 2. get orderbook by fingate
+FinGate.getOrderBook(pair, new OrderBookListener() {</p>
+<blockquote>
+<div><p>&#64;override
+public void onComplete(result) {</p>
+<blockquote>
+<div>// process result</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>});</p>
+</div></blockquote>
+</div>
+<div class="section" id="code-python-get-orderbook">
+<span id="id15"></span><h3>Python Example<a class="headerlink" href="chapter5_offer.html#code-python-get-orderbook" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="mf">1.</span> <span class="n">prepare</span> <span class="n">a</span> <span class="n">order</span> <span class="n">book</span> <span class="n">pair</span>
+<span class="n">pair</span> <span class="o">=</span> <span class="s2">&quot;CNY:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/USD:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="mf">2.</span> <span class="n">get</span> <span class="n">orderbook</span> <span class="n">by</span> <span class="n">fingate</span>
+<span class="n">FinGate</span><span class="o">.</span><span class="n">getOrderBook</span><span class="p">(</span><span class="n">pair</span><span class="p">,</span> <span class="n">callback</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-php-get-orderbook">
+<span id="id16"></span><h3>PHP Example<a class="headerlink" href="chapter5_offer.html#code-php-get-orderbook" title="永久链接至标题">¶</a></h3>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">// 1. prepare a order book pair</span>
+<span class="x">$pair = &quot;CNY:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/USD:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&quot;;</span>
+
+<span class="x">// 2. get orderbook by fingate</span>
+<span class="x">$FinGate-&gt;getOrderBook($pair, &#39;call_back_func&#39;);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-nodejs-get-orderbook">
+<span id="id17"></span><h3>Node.JS Example<a class="headerlink" href="chapter5_offer.html#code-nodejs-get-orderbook" title="永久链接至标题">¶</a></h3>
+<blockquote>
+<div><p>// 1. prepare a order book pair
+var pair = &#8220;CNY:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS/USD:jBciDE8Q3uJjf111VeiUNM775AMKHEbBLS&#8221;;</p>
+<p>// 2. get orderbook by fingate
+FinGate.getOrderBook(pair, function(err, data) {</p>
+<blockquote>
+<div>// process result</div></blockquote>
+<p>});</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chapter6_transaction.html" class="btn btn-neutral float-right" title="记录类信息" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chapter7_relation.html" class="btn btn-neutral" title="关系类交易" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Jintum Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
